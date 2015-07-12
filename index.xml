@@ -6,8 +6,24 @@
     <description>Recent content on Notes...</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 12 Jul 2015 10:33:51 +1000</lastBuildDate>
+    <lastBuildDate>Sun, 12 Jul 2015 19:42:33 +1000</lastBuildDate>
     <atom:link href="https://danward79.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>About</title>
+      <link>https://danward79.github.io/about/</link>
+      <pubDate>Sun, 12 Jul 2015 19:42:33 +1000</pubDate>
+      
+      <guid>https://danward79.github.io/about/</guid>
+      <description>
+
+&lt;h1 id=&#34;about:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;About&lt;/h1&gt;
+
+&lt;p&gt;Blah&lt;/p&gt;
+
+&lt;p&gt;The blah&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>test</title>
@@ -15,7 +31,18 @@
       <pubDate>Sun, 12 Jul 2015 10:33:51 +1000</pubDate>
       
       <guid>https://danward79.github.io/post/test/</guid>
-      <description>&lt;p&gt;Your live on Github Pages&lt;/p&gt;
+      <description>
+
+&lt;h1 id=&#34;your-live-on-github-pages:b128b7694e4de962e0088bcb1bcb254f&#34;&gt;Your live on Github Pages&lt;/h1&gt;
+
+&lt;p&gt;asdsdasd&lt;/p&gt;
+
+&lt;h3 id=&#34;asdsdsadsadsd:b128b7694e4de962e0088bcb1bcb254f&#34;&gt;asdsdsadsadsd&lt;/h3&gt;
+
+&lt;p&gt;asdasd
+asd&lt;/p&gt;
+
+&lt;p&gt;asdasd&lt;/p&gt;
 </description>
     </item>
     
