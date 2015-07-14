@@ -234,7 +234,7 @@ sudo /etc/init.d/watchdog start
 
 &lt;h3 id=&#34;how:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;How&lt;/h3&gt;
 
-&lt;p&gt;These pages are hosted as a static site on &lt;a href=&#34;github.com&#34;&gt;Github&lt;/a&gt;, the static content which forms the pages, is generated with a &lt;a href=&#34;golang.org&#34;&gt;Go&lt;/a&gt; tool called &lt;a href=&#34;gohugo.io&#34;&gt;Hugo&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;These pages are hosted as a static site on &lt;a href=&#34;https://www.github.com&#34;&gt;Github&lt;/a&gt;, the static content which forms the pages, is generated with a &lt;a href=&#34;https://www.golang.org&#34;&gt;Go&lt;/a&gt; tool called &lt;a href=&#34;https://www.gohugo.io&#34;&gt;Hugo&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h3 id=&#34;what:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;What&lt;/h3&gt;
 
