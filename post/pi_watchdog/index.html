@@ -3,22 +3,26 @@
 <head prefix="og: http://ogp.me/ns#">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-  <meta property="og:title" content=" About &middot;  Notes..." />
+  <meta property="og:title" content=" Watchdog on the PI &middot;  Notes..." />
   
   <meta name="theme-color" content="#hexcolor" />
   
   <meta property="og:site_name" content="Notes..." />
-  <meta property="og:url" content="https://danward79.github.io/about/" />
+  <meta property="og:url" content="https://danward79.github.io/post/pi_watchdog/" />
   
   
   <meta property="og:type" content="article" />
   
-  <meta property="og:article:published_time" content="2015-07-12T19:42:33&#43;10:00" />
+  <meta property="og:article:published_time" content="2015-07-13T20:36:59&#43;10:00" />
+  
+  <meta property="og:article:tag" content="PI" />
+  
+  <meta property="og:article:tag" content="Linux" />
   
   
 
   <title>
-     About &middot;  Notes...
+     Watchdog on the PI &middot;  Notes...
   </title>
 
   <link rel="stylesheet" href="https://danward79.github.io/css/bootstrap.min.css" />
@@ -82,15 +86,19 @@
 
 <article>
   <header>
-    <h1 class="text-primary">About</h1>
+    <h1 class="text-primary">Watchdog on the PI</h1>
     <div class="post-meta clearfix">
       <div class="post-date pull-left">
         Posted on
-        <time datetime="2015-07-12T19:42:33&#43;10:00">
-          Jul 12, 2015
+        <time datetime="2015-07-13T20:36:59&#43;10:00">
+          Jul 13, 2015
         </time>
       </div>
       <div class="pull-right">
+        
+        <span class="post-tag small"><a href="https://danward79.github.io//tags/pi">#PI</a></span>
+        
+        <span class="post-tag small"><a href="https://danward79.github.io//tags/linux">#Linux</a></span>
         
       </div>
     </div>
@@ -98,27 +106,83 @@
   <section>
     
 
-<p><em>If you have landed here, I wonder how you found your way..</em></p>
+<p>Sometimes, it&rsquo;s handy to have someone on standby to reset a computer, when it freezes in explicably. There is a tool for this purpose. It&rsquo;s called a <a href="https://en.wikipedia.org/wiki/Watchdog_timer">watchdog</a>. On most of the PI&rsquo;s I have had running I have setup a watchdog for this purpose.</p>
 
-<h3 id="how:6083a88ee3411b0d17ce02d738f69d47">How</h3>
+<p>In short a watchdog, will cause either a hard or soft reset to occur, if it is not kicked by the system often enough. The kick is assumed to indicate an operating system.</p>
 
-<p>These pages are hosted as a static site on <a href="github.com">Github</a>, the static content which forms the pages, is generated with a <a href="golang.org">Go</a> tool called <a href="gohugo.io">Hugo</a>.</p>
+<h4 id="to-install-on-the-raspberry-pi:ee3c7ffdd9fa821c46a9edb3b07acd26">To install on the Raspberry PI.</h4>
 
-<h3 id="what:6083a88ee3411b0d17ce02d738f69d47">What</h3>
+<p>From the command line on a standard Rasbian install.</p>
 
-<p>On these pages you&rsquo;ll find some short posts about things, which I have taken notes to remember. These pages are for me to recall how I have done a task and are as such my &ldquo;Note Book&rdquo;. I happen to share them, as I hope someone else may find them useful.</p>
+<p>First update Raspbian, note the &lsquo;-y&rsquo; flag which suppresses any prompts.</p>
 
-<p>Where possible I do try to give credit by references.</p>
+<pre><code class="language-bash">sudo apt-get -y update
+sudo apt-get -y upgrade
+</code></pre>
 
-<h3 id="why:6083a88ee3411b0d17ce02d738f69d47">Why</h3>
+<p>Expose the watchdog to the operating system. This will create a device at /dev/watchdog</p>
 
-<p>Mainly just for my recollection, and sometime I like to write some stuff.</p>
+<pre><code class="language-bash">sudo modprobe bcm2708_wdog
+</code></pre>
 
-<h3 id="when:6083a88ee3411b0d17ce02d738f69d47">When</h3>
+<p>Edit module to load at boot. Add the following line.</p>
 
-<p>There are no schedules.</p>
+<ul>
+<li>bcm2708_wdog</li>
+</ul>
 
-<p><em>C&rsquo;est la vie.</em></p>
+<pre><code class="language-bash">sudo nano /etc/modules
+</code></pre>
+
+<p>Install the watchdog service, check it is on and start.</p>
+
+<pre><code class="language-bash">sudo apt-get install watchdog chkconfig
+sudo chkconfig watchdog on
+sudo /etc/init.d/watchdog start
+</code></pre>
+
+<p>Open the watchdog config file.</p>
+
+<pre><code class="language-bash">sudo nano /etc/watchdog.conf
+</code></pre>
+
+<p>In the config uncomment lines with</p>
+
+<ul>
+<li>&ldquo;watchdog-device&rdquo; and</li>
+<li>&ldquo;max-load-1 = 24&rdquo;</li>
+</ul>
+
+<p>set the following lines to:</p>
+
+<ul>
+<li>realtime = yes</li>
+<li>priority = 1</li>
+<li>interval = 14</li>
+</ul>
+
+<p>Restart the service.</p>
+
+<pre><code class="language-bash">sudo /etc/init.d/watchdog restart
+</code></pre>
+
+<h4 id="test-it:ee3c7ffdd9fa821c46a9edb3b07acd26">Test it</h4>
+
+<p>To test, lets force the PI to crash. This is known as a Fork-Bomb! Disable swap and then.</p>
+
+<pre><code class="language-bash">sudo swapoff -a
+:(){ :|:&amp; };:
+</code></pre>
+
+<p>You can stop it with: sudo /etc/init.d/watchdog stop OR sudo systemctl stop watchdog.service</p>
+
+<p>You can disable it permanently with: sudo update-rc.d -f watchdog remove OR sudo systemctl disable watchdog.service﻿</p>
+
+<h6 id="references:ee3c7ffdd9fa821c46a9edb3b07acd26">References</h6>
+
+<ol>
+<li><a href="https://rpihouse.wordpress.com/2012/12/06/watching-the-dog/">Watching the dog.</a></li>
+</ol>
 
   </section>
   <footer>
@@ -140,10 +204,10 @@
     </section>
     <ul class="pager">
       
-      <li class="previous disabled"><a href="#"><span aria-hidden="true">&larr;</span> Older</a></li>
+      <li class="previous"><a href="https://danward79.github.io/post/mosquitto/"><span aria-hidden="true">&larr;</span> Older</a></li>
       
       
-      <li class="next"><a href="https://danward79.github.io/post/mosquitto/">Newer <span aria-hidden="true">&rarr;</span></a></li>
+      <li class="next disabled"><a href="#">Newer <span aria-hidden="true">&rarr;</span></a></li>
       
     </ul>
     

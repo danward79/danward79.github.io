@@ -28,6 +28,11 @@
   
   <link href="https://danward79.github.io/index.xml" rel="alternate" type="application/rss+xml" title="Notes..." />
   
+
+  <link rel="stylesheet" href="https://yandex.st/highlightjs/8.0/styles/monokai.min.css">
+<script src="https://yandex.st/highlightjs/8.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
 </head>
 <body>
     <header class="global-header"  style="background-image:url( /images/bg.jpg )">
@@ -35,7 +40,8 @@
       <h1><a href="https://danward79.github.io/">Notes...</a></h1>
       
       <div class="tag-line">
-        is a software developer, hardware hacker and a beer lover. He believes in the power of code.
+        After hours notes, of an Engineer, with a passion for transport systems. Software &amp; hardware hacker, windsurfer.
+ Who believes in open-source.
       </div>
       
       <div class="sns-links hidden-print">
@@ -77,6 +83,56 @@
   
   <article>
   <header>
+    <h2><a href="https://danward79.github.io/post/pi_watchdog/">Watchdog on the PI</a></h2>
+    <div class="post-meta clearfix">
+      <div class="post-date pull-left">
+        Posted on
+        <time datetime="2015-07-13T20:36:59&#43;10:00">
+          Jul 13, 2015
+        </time>
+      </div>
+    </div>
+  </header>
+  <div>
+    Sometimes, it&rsquo;s handy to have someone on standby to reset a computer, when it freezes in explicably. There is a tool for this purpose. It&rsquo;s called a watchdog. On most of the PI&rsquo;s I have had running I have setup a watchdog for this purpose. In short a watchdog, will cause either a hard or soft reset to occur, if it is not kicked by the system often enough. The kick is assumed to indicate an operating system.
+  </div>
+  
+  <footer>
+    <ul class="pager">
+      <li class="next"><a href="https://danward79.github.io/post/pi_watchdog/">Read more &raquo;</a></li>
+    </ul>
+  </footer>
+  
+</article>
+
+  
+  
+  <hr/>
+  
+  <article>
+  <header>
+    <h2><a href="https://danward79.github.io/post/mosquitto/">Mosquitto on the PI</a></h2>
+    <div class="post-meta clearfix">
+      <div class="post-date pull-left">
+        Posted on
+        <time datetime="2015-07-12T20:36:59&#43;10:00">
+          Jul 12, 2015
+        </time>
+      </div>
+    </div>
+  </header>
+  <div>
+    MQTT is a publish/subscribe messaging system, Mosquitto is on open source broker. Install main package From the command line sudo apt-get install mosquitto Install command Line tools sudo apt-get install mosquitto-clients Install C Dev Libraries sudo apt-get install libmosquitto0-dev libmosquittopp0-dev Test subscription mosquitto_sub -v -t ‘#’ or alternatively mosquitto_sub -v -t ‘#’ | xxd
+  </div>
+  
+</article>
+
+  
+  
+  <hr/>
+  
+  <article>
+  <header>
     <h2><a href="https://danward79.github.io/about/">About</a></h2>
     <div class="post-meta clearfix">
       <div class="post-date pull-left">
@@ -88,30 +144,14 @@
     </div>
   </header>
   <div>
-    About Blah The blah
+    If you have landed here, I wonder how you found your way.. How These pages are hosted as a static site on Github, the static content which forms the pages, is generated with a Go tool called Hugo. What On these pages you&rsquo;ll find some short posts about things, which I have taken notes to remember. These pages are for me to recall how I have done a task and are as such my &ldquo;Note Book&rdquo;.
   </div>
   
-</article>
-
-  
-  
-  <hr/>
-  
-  <article>
-  <header>
-    <h2><a href="https://danward79.github.io/post/test/">test</a></h2>
-    <div class="post-meta clearfix">
-      <div class="post-date pull-left">
-        Posted on
-        <time datetime="2015-07-12T10:33:51&#43;10:00">
-          Jul 12, 2015
-        </time>
-      </div>
-    </div>
-  </header>
-  <div>
-    Your live on Github Pages asdsdasd asdsdsadsadsd asdasd asd asdasd
-  </div>
+  <footer>
+    <ul class="pager">
+      <li class="next"><a href="https://danward79.github.io/about/">Read more &raquo;</a></li>
+    </ul>
+  </footer>
   
 </article>
 

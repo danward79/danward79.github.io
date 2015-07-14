@@ -6,8 +6,136 @@
     <description>Recent content on Notes...</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 12 Jul 2015 19:42:33 +1000</lastBuildDate>
+    <lastBuildDate>Mon, 13 Jul 2015 20:36:59 +1000</lastBuildDate>
     <atom:link href="https://danward79.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Watchdog on the PI</title>
+      <link>https://danward79.github.io/post/pi_watchdog/</link>
+      <pubDate>Mon, 13 Jul 2015 20:36:59 +1000</pubDate>
+      
+      <guid>https://danward79.github.io/post/pi_watchdog/</guid>
+      <description>
+
+&lt;p&gt;Sometimes, it&amp;rsquo;s handy to have someone on standby to reset a computer, when it freezes in explicably. There is a tool for this purpose. It&amp;rsquo;s called a &lt;a href=&#34;https://en.wikipedia.org/wiki/Watchdog_timer&#34;&gt;watchdog&lt;/a&gt;. On most of the PI&amp;rsquo;s I have had running I have setup a watchdog for this purpose.&lt;/p&gt;
+
+&lt;p&gt;In short a watchdog, will cause either a hard or soft reset to occur, if it is not kicked by the system often enough. The kick is assumed to indicate an operating system.&lt;/p&gt;
+
+&lt;h4 id=&#34;to-install-on-the-raspberry-pi:ee3c7ffdd9fa821c46a9edb3b07acd26&#34;&gt;To install on the Raspberry PI.&lt;/h4&gt;
+
+&lt;p&gt;From the command line on a standard Rasbian install.&lt;/p&gt;
+
+&lt;p&gt;First update Raspbian, note the &amp;lsquo;-y&amp;rsquo; flag which suppresses any prompts.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo apt-get -y update
+sudo apt-get -y upgrade
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Expose the watchdog to the operating system. This will create a device at /dev/watchdog&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo modprobe bcm2708_wdog
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Edit module to load at boot. Add the following line.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;bcm2708_wdog&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo nano /etc/modules
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Install the watchdog service, check it is on and start.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo apt-get install watchdog chkconfig
+sudo chkconfig watchdog on
+sudo /etc/init.d/watchdog start
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Open the watchdog config file.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo nano /etc/watchdog.conf
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;In the config uncomment lines with&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&amp;ldquo;watchdog-device&amp;rdquo; and&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;max-load-1 = 24&amp;rdquo;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;set the following lines to:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;realtime = yes&lt;/li&gt;
+&lt;li&gt;priority = 1&lt;/li&gt;
+&lt;li&gt;interval = 14&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Restart the service.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo /etc/init.d/watchdog restart
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;test-it:ee3c7ffdd9fa821c46a9edb3b07acd26&#34;&gt;Test it&lt;/h4&gt;
+
+&lt;p&gt;To test, lets force the PI to crash. This is known as a Fork-Bomb! Disable swap and then.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo swapoff -a
+:(){ :|:&amp;amp; };:
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You can stop it with: sudo /etc/init.d/watchdog stop OR sudo systemctl stop watchdog.service&lt;/p&gt;
+
+&lt;p&gt;You can disable it permanently with: sudo update-rc.d -f watchdog remove OR sudo systemctl disable watchdog.service﻿&lt;/p&gt;
+
+&lt;h6 id=&#34;references:ee3c7ffdd9fa821c46a9edb3b07acd26&#34;&gt;References&lt;/h6&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://rpihouse.wordpress.com/2012/12/06/watching-the-dog/&#34;&gt;Watching the dog.&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Mosquitto on the PI</title>
+      <link>https://danward79.github.io/post/mosquitto/</link>
+      <pubDate>Sun, 12 Jul 2015 20:36:59 +1000</pubDate>
+      
+      <guid>https://danward79.github.io/post/mosquitto/</guid>
+      <description>
+
+&lt;p&gt;MQTT is a publish/subscribe messaging system, &lt;a href=&#34;http://mosquitto.org/&#34;&gt;Mosquitto&lt;/a&gt; is on open source broker.&lt;/p&gt;
+
+&lt;h3 id=&#34;install-main-package:c9eb20fb0f7b1c8c904be7dde2286ece&#34;&gt;Install main package&lt;/h3&gt;
+
+&lt;p&gt;From the command line&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo apt-get install mosquitto
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;install-command-line-tools:c9eb20fb0f7b1c8c904be7dde2286ece&#34;&gt;Install command Line tools&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo apt-get install mosquitto-clients
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;install-c-dev-libraries:c9eb20fb0f7b1c8c904be7dde2286ece&#34;&gt;Install C Dev Libraries&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo apt-get install libmosquitto0-dev libmosquittopp0-dev
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;test-subscription:c9eb20fb0f7b1c8c904be7dde2286ece&#34;&gt;Test subscription&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;mosquitto_sub -v -t ‘#’
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;or alternatively&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;mosquitto_sub -v -t ‘#’ | xxd
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
     
     <item>
       <title>About</title>
@@ -17,32 +145,27 @@
       <guid>https://danward79.github.io/about/</guid>
       <description>
 
-&lt;h1 id=&#34;about:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;About&lt;/h1&gt;
+&lt;p&gt;&lt;em&gt;If you have landed here, I wonder how you found your way..&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;Blah&lt;/p&gt;
+&lt;h3 id=&#34;how:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;How&lt;/h3&gt;
 
-&lt;p&gt;The blah&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>test</title>
-      <link>https://danward79.github.io/post/test/</link>
-      <pubDate>Sun, 12 Jul 2015 10:33:51 +1000</pubDate>
-      
-      <guid>https://danward79.github.io/post/test/</guid>
-      <description>
+&lt;p&gt;These pages are hosted as a static site on &lt;a href=&#34;github.com&#34;&gt;Github&lt;/a&gt;, the static content which forms the pages, is generated with a &lt;a href=&#34;golang.org&#34;&gt;Go&lt;/a&gt; tool called &lt;a href=&#34;gohugo.io&#34;&gt;Hugo&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h1 id=&#34;your-live-on-github-pages:b128b7694e4de962e0088bcb1bcb254f&#34;&gt;Your live on Github Pages&lt;/h1&gt;
+&lt;h3 id=&#34;what:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;What&lt;/h3&gt;
 
-&lt;p&gt;asdsdasd&lt;/p&gt;
+&lt;p&gt;On these pages you&amp;rsquo;ll find some short posts about things, which I have taken notes to remember. These pages are for me to recall how I have done a task and are as such my &amp;ldquo;Note Book&amp;rdquo;. I happen to share them, as I hope someone else may find them useful.&lt;/p&gt;
 
-&lt;h3 id=&#34;asdsdsadsadsd:b128b7694e4de962e0088bcb1bcb254f&#34;&gt;asdsdsadsadsd&lt;/h3&gt;
+&lt;p&gt;Where possible I do try to give credit by references.&lt;/p&gt;
 
-&lt;p&gt;asdasd
-asd&lt;/p&gt;
+&lt;h3 id=&#34;why:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;Why&lt;/h3&gt;
 
-&lt;p&gt;asdasd&lt;/p&gt;
+&lt;p&gt;Mainly just for my recollection, and sometime I like to write some stuff.&lt;/p&gt;
+
+&lt;h3 id=&#34;when:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;When&lt;/h3&gt;
+
+&lt;p&gt;There are no schedules.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;C&amp;rsquo;est la vie.&lt;/em&gt;&lt;/p&gt;
 </description>
     </item>
     

@@ -17,11 +17,27 @@
       <guid>https://danward79.github.io/about/</guid>
       <description>
 
-&lt;h1 id=&#34;about:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;About&lt;/h1&gt;
+&lt;p&gt;&lt;em&gt;If you have landed here, I wonder how you found your way..&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;Blah&lt;/p&gt;
+&lt;h3 id=&#34;how:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;How&lt;/h3&gt;
 
-&lt;p&gt;The blah&lt;/p&gt;
+&lt;p&gt;These pages are hosted as a static site on &lt;a href=&#34;github.com&#34;&gt;Github&lt;/a&gt;, the static content which forms the pages, is generated with a &lt;a href=&#34;golang.org&#34;&gt;Go&lt;/a&gt; tool called &lt;a href=&#34;gohugo.io&#34;&gt;Hugo&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;what:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;What&lt;/h3&gt;
+
+&lt;p&gt;On these pages you&amp;rsquo;ll find some short posts about things, which I have taken notes to remember. These pages are for me to recall how I have done a task and are as such my &amp;ldquo;Note Book&amp;rdquo;. I happen to share them, as I hope someone else may find them useful.&lt;/p&gt;
+
+&lt;p&gt;Where possible I do try to give credit by references.&lt;/p&gt;
+
+&lt;h3 id=&#34;why:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;Why&lt;/h3&gt;
+
+&lt;p&gt;Mainly just for my recollection, and sometime I like to write some stuff.&lt;/p&gt;
+
+&lt;h3 id=&#34;when:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;When&lt;/h3&gt;
+
+&lt;p&gt;There are no schedules.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;C&amp;rsquo;est la vie.&lt;/em&gt;&lt;/p&gt;
 </description>
     </item>
     
