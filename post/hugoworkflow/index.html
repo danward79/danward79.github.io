@@ -3,26 +3,24 @@
 <head prefix="og: http://ogp.me/ns#">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-  <meta property="og:title" content=" Watchdog on the PI &middot;  Notes..." />
+  <meta property="og:title" content=" Github &amp; Hugo workflow &middot;  Notes..." />
   
   <meta name="theme-color" content="#hexcolor" />
   
   <meta property="og:site_name" content="Notes..." />
-  <meta property="og:url" content="https://danward79.github.io/post/pi_watchdog/" />
+  <meta property="og:url" content="https://danward79.github.io/post/hugoworkflow/" />
   
   
   <meta property="og:type" content="article" />
   
-  <meta property="og:article:published_time" content="2015-07-13T20:36:59&#43;10:00" />
+  <meta property="og:article:published_time" content="2015-07-14T19:36:59&#43;10:00" />
   
-  <meta property="og:article:tag" content="PI" />
-  
-  <meta property="og:article:tag" content="Linux" />
+  <meta property="og:article:tag" content="Github" />
   
   
 
   <title>
-     Watchdog on the PI &middot;  Notes...
+     Github &amp; Hugo workflow &middot;  Notes...
   </title>
 
   <link rel="stylesheet" href="https://danward79.github.io/css/bootstrap.min.css" />
@@ -86,19 +84,17 @@
 
 <article>
   <header>
-    <h1 class="text-primary">Watchdog on the PI</h1>
+    <h1 class="text-primary">Github &amp; Hugo workflow</h1>
     <div class="post-meta clearfix">
       <div class="post-date pull-left">
         Posted on
-        <time datetime="2015-07-13T20:36:59&#43;10:00">
-          Jul 13, 2015
+        <time datetime="2015-07-14T19:36:59&#43;10:00">
+          Jul 14, 2015
         </time>
       </div>
       <div class="pull-right">
         
-        <span class="post-tag small"><a href="https://danward79.github.io//tags/pi">#PI</a></span>
-        
-        <span class="post-tag small"><a href="https://danward79.github.io//tags/linux">#Linux</a></span>
+        <span class="post-tag small"><a href="https://danward79.github.io//tags/github">#Github</a></span>
         
       </div>
     </div>
@@ -106,83 +102,80 @@
   <section>
     
 
-<p>Sometimes, it&rsquo;s handy to have someone on standby to reset a computer, when it freezes in explicably. There is a tool for this purpose. It&rsquo;s called a <a href="https://en.wikipedia.org/wiki/Watchdog_timer">watchdog</a>. On most of the PI&rsquo;s I have had running I have setup a watchdog for this purpose.</p>
+<p>There are <em>lots</em> of articles about using Hugo with Github. They are all fairly complex. I spent sometime experimenting with them. in the end I decided, I wanted to simplify.</p>
 
-<p>In short a watchdog, will cause either a hard or soft reset to occur, if it is not kicked by the system often enough. The kick is assumed to indicate an operating system.</p>
+<h4 id="requirements:35dd500d9fc6389edf36965b29c56138">Requirements</h4>
 
-<h4 id="to-install-on-the-raspberry-pi:ee3c7ffdd9fa821c46a9edb3b07acd26">To install on the Raspberry PI.</h4>
-
-<p>From the command line on a standard Rasbian install.</p>
-
-<p>First update Raspbian, note the &lsquo;-y&rsquo; flag which suppresses any prompts.</p>
-
-<pre><code class="language-bash">sudo apt-get -y update
-sudo apt-get -y upgrade
-</code></pre>
-
-<p>Expose the watchdog to the operating system. This will create a device at /dev/watchdog</p>
-
-<pre><code class="language-bash">sudo modprobe bcm2708_wdog
-</code></pre>
-
-<p>Edit module to load at boot. Add the following line.</p>
-
-<ul>
-<li>bcm2708_wdog</li>
-</ul>
-
-<pre><code class="language-bash">sudo nano /etc/modules
-</code></pre>
-
-<p>Install the watchdog service, check it is on and start.</p>
-
-<pre><code class="language-bash">sudo apt-get install watchdog chkconfig
-sudo chkconfig watchdog on
-sudo /etc/init.d/watchdog start
-</code></pre>
-
-<p>Open the watchdog config file.</p>
-
-<pre><code class="language-bash">sudo nano /etc/watchdog.conf
-</code></pre>
-
-<p>In the config uncomment lines with</p>
-
-<ul>
-<li>&ldquo;watchdog-device&rdquo; and</li>
-<li>&ldquo;max-load-1 = 24&rdquo;</li>
-</ul>
-
-<p>set the following lines to:</p>
-
-<ul>
-<li>realtime = yes</li>
-<li>priority = 1</li>
-<li>interval = 14</li>
-</ul>
-
-<p>Restart the service.</p>
-
-<pre><code class="language-bash">sudo /etc/init.d/watchdog restart
-</code></pre>
-
-<h4 id="test-it:ee3c7ffdd9fa821c46a9edb3b07acd26">Test it</h4>
-
-<p>To test, lets force the PI to crash. This is known as a Fork-Bomb! Disable swap and then.</p>
-
-<pre><code class="language-bash">sudo swapoff -a
-:(){ :|:&amp; };:
-</code></pre>
-
-<p>You can stop it with: sudo /etc/init.d/watchdog stop OR sudo systemctl stop watchdog.service</p>
-
-<p>You can disable it permanently with: sudo update-rc.d -f watchdog remove OR sudo systemctl disable watchdog.service﻿</p>
-
-<h6 id="references:ee3c7ffdd9fa821c46a9edb3b07acd26">References</h6>
+<p>The requirements for me are:</p>
 
 <ol>
-<li><a href="https://rpihouse.wordpress.com/2012/12/06/watching-the-dog/">Watching the dog.</a></li>
+<li>Deploy static site with no cost to me.</li>
+<li>I did not need to deploy source. Compiled static site is enough. (e.g. HTML)</li>
+<li>Simple, minimal steps from me.</li>
 </ol>
+
+<h4 id="workflow:35dd500d9fc6389edf36965b29c56138">Workflow</h4>
+
+<p>This setup will enable me to work in Atom editor on posts, which are saved in the source folder.</p>
+
+<p>On completion of a post. Running the deploy command, will compile the site and move the content to the repo, then commit and push the changes to github.</p>
+
+<h4 id="setup:35dd500d9fc6389edf36965b29c56138">Setup</h4>
+
+<p>Assuming you have hugo and git installed on your machine and setup.</p>
+
+<p>I ended up with the following directory structure. With a deployment bash script.</p>
+
+<pre><code>  ~/TechNotes
+      danward79.github.io/
+      source/
+      deploy.sh
+</code></pre>
+
+<ul>
+<li>The source folder stores the uncompiled hugo site. All edits to posts etc occur here.</li>
+<li>The repo (danward79.github.io) stores the compiled site and is synced using git commit and git push.</li>
+<li>deploy.sh is the script that compiles and deploys</li>
+</ul>
+
+<h4 id="deployment-script-deploy-sh:35dd500d9fc6389edf36965b29c56138">Deployment Script - deploy.sh</h4>
+
+<p>The deploy script is shown below. It would need editting to suit your setup and situation.</p>
+
+<pre><code class="language-bash">#!/bin/bash
+
+srcPath=~/Documents/Development/Websites/TechNotes/source/
+deployPath=~/Documents/Development/Websites/TechNotes/danward79.github.io/
+branch='master'
+
+echo 'Deploy changes to Tech Notes'
+cd $srcPath
+
+echo 'Building changes'
+hugo -D
+
+echo 'Moving changes to repo'
+cp -R $srcPath/public/ $deployPath
+
+echo 'Checkout changes'
+cd $deployPath
+git checkout $branch
+git add -A
+
+echo 'Commit changes'
+git commit -m 'Publish Changes'
+
+echo 'Pushing changes'
+git push origin master
+
+echo 'Returning to source path'
+cd $srcPath
+</code></pre>
+
+<p>Simple. On completion simply run</p>
+
+<pre><code class="language-bash">bash deploy.sh
+</code></pre>
 
   </section>
   <footer>
@@ -204,10 +197,10 @@ sudo /etc/init.d/watchdog start
     </section>
     <ul class="pager">
       
-      <li class="previous"><a href="https://danward79.github.io/post/mosquitto/"><span aria-hidden="true">&larr;</span> Older</a></li>
+      <li class="previous"><a href="https://danward79.github.io/post/pi_watchdog/"><span aria-hidden="true">&larr;</span> Older</a></li>
       
       
-      <li class="next"><a href="https://danward79.github.io/post/hugoworkflow/">Newer <span aria-hidden="true">&rarr;</span></a></li>
+      <li class="next disabled"><a href="#">Newer <span aria-hidden="true">&rarr;</span></a></li>
       
     </ul>
     

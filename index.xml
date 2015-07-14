@@ -6,8 +6,93 @@
     <description>Recent content on Notes...</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 13 Jul 2015 20:36:59 +1000</lastBuildDate>
+    <lastBuildDate>Tue, 14 Jul 2015 19:36:59 +1000</lastBuildDate>
     <atom:link href="https://danward79.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Github &amp; Hugo workflow</title>
+      <link>https://danward79.github.io/post/hugoworkflow/</link>
+      <pubDate>Tue, 14 Jul 2015 19:36:59 +1000</pubDate>
+      
+      <guid>https://danward79.github.io/post/hugoworkflow/</guid>
+      <description>
+
+&lt;p&gt;There are &lt;em&gt;lots&lt;/em&gt; of articles about using Hugo with Github. They are all fairly complex. I spent sometime experimenting with them. in the end I decided, I wanted to simplify.&lt;/p&gt;
+
+&lt;h4 id=&#34;requirements:35dd500d9fc6389edf36965b29c56138&#34;&gt;Requirements&lt;/h4&gt;
+
+&lt;p&gt;The requirements for me are:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Deploy static site with no cost to me.&lt;/li&gt;
+&lt;li&gt;I did not need to deploy source. Compiled static site is enough. (e.g. HTML)&lt;/li&gt;
+&lt;li&gt;Simple, minimal steps from me.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&#34;workflow:35dd500d9fc6389edf36965b29c56138&#34;&gt;Workflow&lt;/h4&gt;
+
+&lt;p&gt;This setup will enable me to work in Atom editor on posts, which are saved in the source folder.&lt;/p&gt;
+
+&lt;p&gt;On completion of a post. Running the deploy command, will compile the site and move the content to the repo, then commit and push the changes to github.&lt;/p&gt;
+
+&lt;h4 id=&#34;setup:35dd500d9fc6389edf36965b29c56138&#34;&gt;Setup&lt;/h4&gt;
+
+&lt;p&gt;Assuming you have hugo and git installed on your machine and setup.&lt;/p&gt;
+
+&lt;p&gt;I ended up with the following directory structure. With a deployment bash script.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;  ~/TechNotes
+      danward79.github.io/
+      source/
+      deploy.sh
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The source folder stores the uncompiled hugo site. All edits to posts etc occur here.&lt;/li&gt;
+&lt;li&gt;The repo (danward79.github.io) stores the compiled site and is synced using git commit and git push.&lt;/li&gt;
+&lt;li&gt;deploy.sh is the script that compiles and deploys&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;deployment-script-deploy-sh:35dd500d9fc6389edf36965b29c56138&#34;&gt;Deployment Script - deploy.sh&lt;/h4&gt;
+
+&lt;p&gt;The deploy script is shown below. It would need editting to suit your setup and situation.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#!/bin/bash
+
+srcPath=~/Documents/Development/Websites/TechNotes/source/
+deployPath=~/Documents/Development/Websites/TechNotes/danward79.github.io/
+branch=&#39;master&#39;
+
+echo &#39;Deploy changes to Tech Notes&#39;
+cd $srcPath
+
+echo &#39;Building changes&#39;
+hugo -D
+
+echo &#39;Moving changes to repo&#39;
+cp -R $srcPath/public/ $deployPath
+
+echo &#39;Checkout changes&#39;
+cd $deployPath
+git checkout $branch
+git add -A
+
+echo &#39;Commit changes&#39;
+git commit -m &#39;Publish Changes&#39;
+
+echo &#39;Pushing changes&#39;
+git push origin master
+
+echo &#39;Returning to source path&#39;
+cd $srcPath
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Simple. On completion simply run&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;bash deploy.sh
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
     
     <item>
       <title>Watchdog on the PI</title>
