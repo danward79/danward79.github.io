@@ -152,7 +152,7 @@ echo 'Deploy changes to Tech Notes'
 cd $srcPath
 
 echo 'Building changes'
-hugo -D
+hugo
 
 echo 'Moving changes to repo'
 cp -R $srcPath/public/ $deployPath
