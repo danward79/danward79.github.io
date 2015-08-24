@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mqtt on Notes...</title>
+    <link>https://danward79.github.io/tags/mqtt/</link>
+    <description>Recent content in Mqtt on Notes...</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 12 Jul 2015 20:36:59 +1000</lastBuildDate>
+    <atom:link href="https://danward79.github.io/tags/mqtt/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Mosquitto on the PI</title>
+      <link>https://danward79.github.io/post/mosquitto/</link>
+      <pubDate>Sun, 12 Jul 2015 20:36:59 +1000</pubDate>
+      
+      <guid>https://danward79.github.io/post/mosquitto/</guid>
+      <description>
+
+&lt;p&gt;MQTT is a publish/subscribe messaging system, &lt;a href=&#34;http://mosquitto.org/&#34;&gt;Mosquitto&lt;/a&gt; is on open source broker.&lt;/p&gt;
+
+&lt;h3 id=&#34;install-main-package:c9eb20fb0f7b1c8c904be7dde2286ece&#34;&gt;Install main package&lt;/h3&gt;
+
+&lt;p&gt;From the command line&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo apt-get install mosquitto
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;install-command-line-tools:c9eb20fb0f7b1c8c904be7dde2286ece&#34;&gt;Install command Line tools&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo apt-get install mosquitto-clients
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;install-c-dev-libraries:c9eb20fb0f7b1c8c904be7dde2286ece&#34;&gt;Install C Dev Libraries&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo apt-get install libmosquitto0-dev libmosquittopp0-dev
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;test-subscription:c9eb20fb0f7b1c8c904be7dde2286ece&#34;&gt;Test subscription&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;mosquitto_sub -v -t ‘#’
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;or alternatively&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;mosquitto_sub -v -t ‘#’ | xxd
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

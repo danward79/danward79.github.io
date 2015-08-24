@@ -3,28 +3,19 @@
 <head prefix="og: http://ogp.me/ns#">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-  <meta property="og:title" content=" Mosquitto on the PI &middot;  Notes..." />
+  <meta property="og:title" content=" Lua &middot;  Notes..." />
   
   <meta name="theme-color" content="#hexcolor" />
   
   <meta property="og:site_name" content="Notes..." />
-  <meta property="og:url" content="https://danward79.github.io/post/mosquitto/" />
+  <meta property="og:url" content="https://danward79.github.io/tags/lua/" />
   
   
-  <meta property="og:type" content="article" />
-  
-  <meta property="og:article:published_time" content="2015-07-12T20:36:59&#43;10:00" />
-  
-  <meta property="og:article:tag" content="PI" />
-  
-  <meta property="og:article:tag" content="Linux" />
-  
-  <meta property="og:article:tag" content="MQTT" />
-  
+  <meta property="og:type" content="website" />
   
 
   <title>
-     Mosquitto on the PI &middot;  Notes...
+     Lua &middot;  Notes...
   </title>
 
   <link rel="stylesheet" href="https://danward79.github.io/css/bootstrap.min.css" />
@@ -81,95 +72,45 @@
       </a>
       
       
+      <a href="https://danward79.github.io/tags/lua/index.xml" class="btn-header btn-subscribe hidden-xs">
+        <i class="fa fa-rss"></i>
+        &nbsp;Subscribe
+      </a>
+      
     </section>
   </header>
   <main class="container">
 
-
-<article>
+<section class="article-list">
+  <h1>Lua</h1>
+  
+  <hr/>
+  <article>
   <header>
-    <h1 class="text-primary">Mosquitto on the PI</h1>
+    <h2><a href="https://danward79.github.io/post/netremote/">Blast from the Past - Netremote Pocket PC Screen shots</a></h2>
     <div class="post-meta clearfix">
       <div class="post-date pull-left">
         Posted on
-        <time datetime="2015-07-12T20:36:59&#43;10:00">
-          Jul 12, 2015
+        <time datetime="2015-08-24T19:21:19&#43;10:00">
+          Aug 24, 2015
         </time>
-      </div>
-      <div class="pull-right">
-        
-        <span class="post-tag small"><a href="https://danward79.github.io//tags/pi">#PI</a></span>
-        
-        <span class="post-tag small"><a href="https://danward79.github.io//tags/linux">#Linux</a></span>
-        
-        <span class="post-tag small"><a href="https://danward79.github.io//tags/mqtt">#MQTT</a></span>
-        
       </div>
     </div>
   </header>
-  <section>
-    
-
-<p>MQTT is a publish/subscribe messaging system, <a href="http://mosquitto.org/">Mosquitto</a> is on open source broker.</p>
-
-<h3 id="install-main-package:c9eb20fb0f7b1c8c904be7dde2286ece">Install main package</h3>
-
-<p>From the command line</p>
-
-<pre><code class="language-bash">sudo apt-get install mosquitto
-</code></pre>
-
-<h3 id="install-command-line-tools:c9eb20fb0f7b1c8c904be7dde2286ece">Install command Line tools</h3>
-
-<pre><code class="language-bash">sudo apt-get install mosquitto-clients
-</code></pre>
-
-<h3 id="install-c-dev-libraries:c9eb20fb0f7b1c8c904be7dde2286ece">Install C Dev Libraries</h3>
-
-<pre><code class="language-bash">sudo apt-get install libmosquitto0-dev libmosquittopp0-dev
-</code></pre>
-
-<h3 id="test-subscription:c9eb20fb0f7b1c8c904be7dde2286ece">Test subscription</h3>
-
-<pre><code class="language-bash">mosquitto_sub -v -t ‘#’
-
-</code></pre>
-
-<p>or alternatively</p>
-
-<pre><code class="language-bash">mosquitto_sub -v -t ‘#’ | xxd
-</code></pre>
-
-  </section>
+  <div>
+    The Past Below is a blast from the past, some work I did in 2002 using Netremote from Promixis to provide some degree of automation in my flat, the front end was supported with muscle provided by Girder, which had a lot of LUA running behind it on my server in node zero. Netremote Pocket PC Screen shots The basis of this ccf (skin) is JLee&rsquo;s Opus Theme, I have just heavily modified all the pages.
+  </div>
+  
   <footer>
-    <section class="author-info row">
-      <div class="author-avatar col-md-2">
-        
-        <img alt="Author Avatar" src="http://s.gravatar.com/avatar/a4d33f1a992c34a939744b3cf3c28ac4?s=80" />
-        
-      </div>
-      <div class="author-meta col-md-6">
-        
-        <h1 class="author-name text-primary">Dan Ward</h1>
-        
-        
-        <div class="author-bio">Railway Systems Engineer, Passionate about transport systems</div>
-        
-      </div>
-      
-    </section>
     <ul class="pager">
-      
-      <li class="previous"><a href="https://danward79.github.io/about/"><span aria-hidden="true">&larr;</span> Older</a></li>
-      
-      
-      <li class="next"><a href="https://danward79.github.io/post/pi_watchdog/">Newer <span aria-hidden="true">&rarr;</span></a></li>
-      
+      <li class="next"><a href="https://danward79.github.io/post/netremote/">Read more &raquo;</a></li>
     </ul>
-    
   </footer>
+  
 </article>
 
+  
+</section>
   </main>
   <footer class="container global-footer">
     <div class="copyright-note pull-left">
@@ -217,4 +158,5 @@
   
 </body>
 </html>
+
 

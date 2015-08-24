@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Home Automation on Notes...</title>
+    <link>https://danward79.github.io/tags/home-automation/</link>
+    <description>Recent content in Home Automation on Notes...</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 24 Aug 2015 19:21:19 +1000</lastBuildDate>
+    <atom:link href="https://danward79.github.io/tags/home-automation/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Blast from the Past - Netremote Pocket PC Screen shots</title>
+      <link>https://danward79.github.io/post/netremote/</link>
+      <pubDate>Mon, 24 Aug 2015 19:21:19 +1000</pubDate>
+      
+      <guid>https://danward79.github.io/post/netremote/</guid>
+      <description>
+
+&lt;h2 id=&#34;the-past:14f38a8bf99ff13235a9c923b27550a5&#34;&gt;The Past&lt;/h2&gt;
+
+&lt;p&gt;Below is a blast from the past, some work I did in 2002 using Netremote from &lt;a href=&#34;http://www.promixis.com&#34;&gt;Promixis&lt;/a&gt; to provide some degree of automation in my flat, the front end was supported with muscle provided by Girder, which had a lot of &lt;a href=&#34;http://www.lua.org&#34;&gt;LUA&lt;/a&gt; running behind it on my server in node zero.&lt;/p&gt;
+
+&lt;h3 id=&#34;netremote-pocket-pc-screen-shots:14f38a8bf99ff13235a9c923b27550a5&#34;&gt;Netremote Pocket PC Screen shots&lt;/h3&gt;
+
+&lt;p&gt;The basis of this ccf (skin) is JLee&amp;rsquo;s Opus Theme, I have just heavily modified all the pages. Really only the JRMC pages are similar.&lt;/p&gt;
+
+&lt;p&gt;Below are a few screenshots, not all of them thou.  From NetRemote, I can do all the below.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Play music in multiple zones, only using one at the moment due to recent house move.&lt;/li&gt;
+&lt;li&gt;Play any DVD I own on from a central server.  At the touch of a &amp;ldquo;button&amp;rdquo;.&lt;/li&gt;
+&lt;li&gt;Control my lighting.&lt;/li&gt;
+&lt;li&gt;See a 5-day forecast, including current conditions and Radar.&lt;/li&gt;
+&lt;li&gt;Get local wind conditions for Windsurfing thanks to PiertoPier.net&lt;/li&gt;
+&lt;li&gt;Get Sea Conditions from a local Bouy, this gives me Sea Temperature, and Offshore Wave Height etc.&lt;/li&gt;
+&lt;li&gt;See the days time times.&lt;/li&gt;
+&lt;li&gt;Control SageTV, my PVR (Personal Video Recorder), and see it&amp;rsquo;s current status.  i.e. See what is recording and playing and available disk space.  (This is like Sky+ on steroids for those who don&amp;rsquo;t know)&lt;/li&gt;
+&lt;li&gt;Control all my equipment.&lt;/li&gt;
+&lt;li&gt;View local web cams, i.e. the beach!&lt;/li&gt;
+&lt;li&gt;Thats all I can remember for this one&amp;hellip;.  I have two more thou that do more and other things&amp;hellip;.  More on that later.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table style=&#34;width: 100%; height: 100%; text-align: left; margin-left: auto; margin-right: auto;&#34; border=&#34;0&#34; cellpadding=&#34;2&#34; cellspacing=&#34;2&#34;&gt;
+  &lt;tbody&gt;
+  &lt;tr&gt;
+    &lt;td style=&#34;text-align: center; vertical-align: middle;&#34;&gt;&lt;img style=&#34;width: 243px; height: 322px;&#34; alt=&#34;&#34; title=&#34;OPUS Skin Home Page&#34; src=&#34;https://danward79.github.io/static/ppchome.jpg&#34; align=&#34;middle&#34;&gt;&lt;br&gt;Home Page&lt;/td&gt;
+    &lt;td style=&#34;text-align: center;&#34;&gt;&lt;img style=&#34;width: 243px; height: 322px;&#34; alt=&#34;&#34; title=&#34;Weather Conditions&#34; src=&#34;https://danward79.github.io/static/ppcweathercond.jpg&#34;&gt;&lt;br&gt;Current Conditions&lt;/td&gt;
+    &lt;td style=&#34;text-align: center;&#34;&gt;&lt;img style=&#34;width: 243px; height: 320px;&#34; alt=&#34;&#34; title=&#34;Weather Radar&#34; src=&#34;https://danward79.github.io/static/ppcweatherradar.jpg&#34;&gt;&lt;br&gt;Current Weather Radar&lt;/td&gt;
+    &lt;/tr&gt;&lt;tr&gt;
+    &lt;td style=&#34;text-align: center;&#34;&gt;&lt;img style=&#34;width: 243px; height: 320px;&#34; alt=&#34;&#34; title=&#34;Weather Forecast&#34; src=&#34;https://danward79.github.io/static/ppcweatherforecast.jpg&#34;&gt;&lt;br&gt;Forecast&lt;/td&gt;
+    &lt;td style=&#34;text-align: center;&#34;&gt;&lt;img style=&#34;width: 243px; height: 321px;&#34; alt=&#34;&#34; title=&#34;Offshore Sea Conditions and Local Tides&#34; src=&#34;https://danward79.github.io/static/ppctidalseaconditions.jpg&#34;&gt;&lt;br&gt;Tidal and Sea Conditions&lt;/td&gt;
+    &lt;td style=&#34;text-align: center;&#34;&gt;&lt;img style=&#34;width: 242px; height: 321px;&#34; alt=&#34;&#34; title=&#34;DVD Juke Box - Covers Page&#34; src=&#34;https://danward79.github.io/static/ppcldjcovers.jpg&#34;&gt;&lt;br&gt;DVD Jukebox - Covers View&lt;/td&gt;
+    &lt;/tr&gt;&lt;tr&gt;
+    &lt;td style=&#34;text-align: center;&#34;&gt;&lt;img style=&#34;width: 242px; height: 322px;&#34; alt=&#34;&#34; title=&#34;DVD JukeBox - Titles Page&#34; src=&#34;https://danward79.github.io/static/ppcljdtitles.jpg&#34;&gt;&lt;br&gt;DVD Jukebox - Titles View&lt;/td&gt;
+    &lt;td style=&#34;text-align: center;&#34;&gt;&lt;img style=&#34;width: 243px; height: 321px;&#34; alt=&#34;&#34; title=&#34;Dvd JukeBox - Large Cover View&#34; src=&#34;https://danward79.github.io/static/ppcldjlargecover.jpg&#34;&gt;&lt;br&gt;DVD Jukebox - Large Cover View&lt;/td&gt;
+    &lt;td style=&#34;text-align: center;&#34;&gt;&lt;img style=&#34;width: 243px; height: 321px;&#34; alt=&#34;&#34; title=&#34;DVD Info&#34; src=&#34;https://danward79.github.io/static/ppcldjinfo.jpg&#34;&gt;&lt;br&gt;DVD Jukebox - DVD Info&lt;/td&gt;
+    &lt;/tr&gt;&lt;tr&gt;
+    &lt;td style=&#34;text-align: center;&#34;&gt;&lt;img style=&#34;width: 243px; height: 321px;&#34; alt=&#34;&#34; title=&#34;DVD Control&#34; src=&#34;https://danward79.github.io/static/ppcljddvdcontrol.jpg&#34;&gt;&lt;br&gt;DVD Control&lt;/td&gt;
+    &lt;td style=&#34;text-align: center;&#34;&gt;&lt;/td&gt;
+    &lt;td&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
