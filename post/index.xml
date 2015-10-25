@@ -2,90 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Notes...</title>
-    <link>http://localhost:1313/post/</link>
+    <link>https://danward79.github.io/post/</link>
     <description>Recent content in Posts on Notes...</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 06 Sep 2015 17:50:26 +1000</lastBuildDate>
-    <atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Regex - Some Notes</title>
-      <link>http://localhost:1313/post/regex/</link>
-      <pubDate>Sun, 06 Sep 2015 17:50:26 +1000</pubDate>
-      
-      <guid>http://localhost:1313/post/regex/</guid>
-      <description>
-
-&lt;p&gt;Notes on regular expressions. Atom is a great test bed, the search function allows regex!&lt;/p&gt;
-
-&lt;h5 id=&#34;control-characters:1b46089a3311826c8e49477c918d1861&#34;&gt;Control characters&lt;/h5&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;\A	Start of string
-
-\z	End of string
-
-\b word boundary
-
-\d numeric characters, \D not numerics (i.e.. ^\d)
-
-\w word, \W not words
-
-\s space, \S not whitespace
-
-\n newline character
-
-\ escape character.
-
-? 0 or 1 times
-
-+ 1 or more times
-
-^ &amp;amp; $ ^	Start of line, $	End of line
-
-^ negate
-
-* 0 or more times
-
-.	Any single character
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h5 id=&#34;grouping-ranges-and-interval-expressions:1b46089a3311826c8e49477c918d1861&#34;&gt;Grouping, Ranges and Interval Expressions&lt;/h5&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;() Group characters. For example:
-                      (a|b)	a or b
-
-?: non-capturing group
-
-[] Range. For example:
-          [abc]	A single character of: a, b, or c
-          [a-z]	Any single character in the range a-z
-          [a-zA-Z]	Any single character in the range a-z or A-Z          
-
-{} interval expression, {x} matches at least x times, {x,y} matches at least x.  times and upto y times. For example:
-                          a{3}	Exactly 3 of a
-                          a{3,}	3 or more of a
-                          a{3,6}	Between 3 and 6 of a
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h5 id=&#34;modifiers:1b46089a3311826c8e49477c918d1861&#34;&gt;Modifiers&lt;/h5&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;
-i ignore case
-m multiline modifier
-g global modifier
-
-&lt;/code&gt;&lt;/pre&gt;
-</description>
-    </item>
+    <lastBuildDate>Mon, 24 Aug 2015 19:21:19 +1000</lastBuildDate>
+    <atom:link href="https://danward79.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Blast from the Past - Netremote Pocket PC Screen shots</title>
-      <link>http://localhost:1313/post/netremote/</link>
+      <link>https://danward79.github.io/post/netremote/</link>
       <pubDate>Mon, 24 Aug 2015 19:21:19 +1000</pubDate>
       
-      <guid>http://localhost:1313/post/netremote/</guid>
+      <guid>https://danward79.github.io/post/netremote/</guid>
       <description>
 
 &lt;h2 id=&#34;the-past:14f38a8bf99ff13235a9c923b27550a5&#34;&gt;The Past&lt;/h2&gt;
@@ -115,19 +44,19 @@ g global modifier
 &lt;table style=&#34;width: 100%; height: 100%; text-align: left; margin-left: auto; margin-right: auto;&#34; border=&#34;0&#34; cellpadding=&#34;2&#34; cellspacing=&#34;2&#34;&gt;
   &lt;tbody&gt;
   &lt;tr&gt;
-    &lt;td style=&#34;text-align: center; vertical-align: middle;&#34;&gt;&lt;img style=&#34;width: 243px; height: 322px;&#34; alt=&#34;&#34; title=&#34;OPUS Skin Home Page&#34; src=&#34;http://localhost:1313/static/ppchome.jpg&#34; align=&#34;middle&#34;&gt;&lt;br&gt;Home Page&lt;/td&gt;
-    &lt;td style=&#34;text-align: center;&#34;&gt;&lt;img style=&#34;width: 243px; height: 322px;&#34; alt=&#34;&#34; title=&#34;Weather Conditions&#34; src=&#34;http://localhost:1313/static/ppcweathercond.jpg&#34;&gt;&lt;br&gt;Current Conditions&lt;/td&gt;
-    &lt;td style=&#34;text-align: center;&#34;&gt;&lt;img style=&#34;width: 243px; height: 320px;&#34; alt=&#34;&#34; title=&#34;Weather Radar&#34; src=&#34;http://localhost:1313/static/ppcweatherradar.jpg&#34;&gt;&lt;br&gt;Current Weather Radar&lt;/td&gt;
+    &lt;td style=&#34;text-align: center; vertical-align: middle;&#34;&gt;&lt;img style=&#34;width: 243px; height: 322px;&#34; alt=&#34;&#34; title=&#34;OPUS Skin Home Page&#34; src=&#34;https://danward79.github.io/static/ppchome.jpg&#34; align=&#34;middle&#34;&gt;&lt;br&gt;Home Page&lt;/td&gt;
+    &lt;td style=&#34;text-align: center;&#34;&gt;&lt;img style=&#34;width: 243px; height: 322px;&#34; alt=&#34;&#34; title=&#34;Weather Conditions&#34; src=&#34;https://danward79.github.io/static/ppcweathercond.jpg&#34;&gt;&lt;br&gt;Current Conditions&lt;/td&gt;
+    &lt;td style=&#34;text-align: center;&#34;&gt;&lt;img style=&#34;width: 243px; height: 320px;&#34; alt=&#34;&#34; title=&#34;Weather Radar&#34; src=&#34;https://danward79.github.io/static/ppcweatherradar.jpg&#34;&gt;&lt;br&gt;Current Weather Radar&lt;/td&gt;
     &lt;/tr&gt;&lt;tr&gt;
-    &lt;td style=&#34;text-align: center;&#34;&gt;&lt;img style=&#34;width: 243px; height: 320px;&#34; alt=&#34;&#34; title=&#34;Weather Forecast&#34; src=&#34;http://localhost:1313/static/ppcweatherforecast.jpg&#34;&gt;&lt;br&gt;Forecast&lt;/td&gt;
-    &lt;td style=&#34;text-align: center;&#34;&gt;&lt;img style=&#34;width: 243px; height: 321px;&#34; alt=&#34;&#34; title=&#34;Offshore Sea Conditions and Local Tides&#34; src=&#34;http://localhost:1313/static/ppctidalseaconditions.jpg&#34;&gt;&lt;br&gt;Tidal and Sea Conditions&lt;/td&gt;
-    &lt;td style=&#34;text-align: center;&#34;&gt;&lt;img style=&#34;width: 242px; height: 321px;&#34; alt=&#34;&#34; title=&#34;DVD Juke Box - Covers Page&#34; src=&#34;http://localhost:1313/static/ppcldjcovers.jpg&#34;&gt;&lt;br&gt;DVD Jukebox - Covers View&lt;/td&gt;
+    &lt;td style=&#34;text-align: center;&#34;&gt;&lt;img style=&#34;width: 243px; height: 320px;&#34; alt=&#34;&#34; title=&#34;Weather Forecast&#34; src=&#34;https://danward79.github.io/static/ppcweatherforecast.jpg&#34;&gt;&lt;br&gt;Forecast&lt;/td&gt;
+    &lt;td style=&#34;text-align: center;&#34;&gt;&lt;img style=&#34;width: 243px; height: 321px;&#34; alt=&#34;&#34; title=&#34;Offshore Sea Conditions and Local Tides&#34; src=&#34;https://danward79.github.io/static/ppctidalseaconditions.jpg&#34;&gt;&lt;br&gt;Tidal and Sea Conditions&lt;/td&gt;
+    &lt;td style=&#34;text-align: center;&#34;&gt;&lt;img style=&#34;width: 242px; height: 321px;&#34; alt=&#34;&#34; title=&#34;DVD Juke Box - Covers Page&#34; src=&#34;https://danward79.github.io/static/ppcldjcovers.jpg&#34;&gt;&lt;br&gt;DVD Jukebox - Covers View&lt;/td&gt;
     &lt;/tr&gt;&lt;tr&gt;
-    &lt;td style=&#34;text-align: center;&#34;&gt;&lt;img style=&#34;width: 242px; height: 322px;&#34; alt=&#34;&#34; title=&#34;DVD JukeBox - Titles Page&#34; src=&#34;http://localhost:1313/static/ppcljdtitles.jpg&#34;&gt;&lt;br&gt;DVD Jukebox - Titles View&lt;/td&gt;
-    &lt;td style=&#34;text-align: center;&#34;&gt;&lt;img style=&#34;width: 243px; height: 321px;&#34; alt=&#34;&#34; title=&#34;Dvd JukeBox - Large Cover View&#34; src=&#34;http://localhost:1313/static/ppcldjlargecover.jpg&#34;&gt;&lt;br&gt;DVD Jukebox - Large Cover View&lt;/td&gt;
-    &lt;td style=&#34;text-align: center;&#34;&gt;&lt;img style=&#34;width: 243px; height: 321px;&#34; alt=&#34;&#34; title=&#34;DVD Info&#34; src=&#34;http://localhost:1313/static/ppcldjinfo.jpg&#34;&gt;&lt;br&gt;DVD Jukebox - DVD Info&lt;/td&gt;
+    &lt;td style=&#34;text-align: center;&#34;&gt;&lt;img style=&#34;width: 242px; height: 322px;&#34; alt=&#34;&#34; title=&#34;DVD JukeBox - Titles Page&#34; src=&#34;https://danward79.github.io/static/ppcljdtitles.jpg&#34;&gt;&lt;br&gt;DVD Jukebox - Titles View&lt;/td&gt;
+    &lt;td style=&#34;text-align: center;&#34;&gt;&lt;img style=&#34;width: 243px; height: 321px;&#34; alt=&#34;&#34; title=&#34;Dvd JukeBox - Large Cover View&#34; src=&#34;https://danward79.github.io/static/ppcldjlargecover.jpg&#34;&gt;&lt;br&gt;DVD Jukebox - Large Cover View&lt;/td&gt;
+    &lt;td style=&#34;text-align: center;&#34;&gt;&lt;img style=&#34;width: 243px; height: 321px;&#34; alt=&#34;&#34; title=&#34;DVD Info&#34; src=&#34;https://danward79.github.io/static/ppcldjinfo.jpg&#34;&gt;&lt;br&gt;DVD Jukebox - DVD Info&lt;/td&gt;
     &lt;/tr&gt;&lt;tr&gt;
-    &lt;td style=&#34;text-align: center;&#34;&gt;&lt;img style=&#34;width: 243px; height: 321px;&#34; alt=&#34;&#34; title=&#34;DVD Control&#34; src=&#34;http://localhost:1313/static/ppcljddvdcontrol.jpg&#34;&gt;&lt;br&gt;DVD Control&lt;/td&gt;
+    &lt;td style=&#34;text-align: center;&#34;&gt;&lt;img style=&#34;width: 243px; height: 321px;&#34; alt=&#34;&#34; title=&#34;DVD Control&#34; src=&#34;https://danward79.github.io/static/ppcljddvdcontrol.jpg&#34;&gt;&lt;br&gt;DVD Control&lt;/td&gt;
     &lt;td style=&#34;text-align: center;&#34;&gt;&lt;/td&gt;
     &lt;td&gt;&lt;/td&gt;
     &lt;/tr&gt;
@@ -138,10 +67,10 @@ g global modifier
     
     <item>
       <title>Github &amp; Hugo workflow</title>
-      <link>http://localhost:1313/post/hugoworkflow/</link>
+      <link>https://danward79.github.io/post/hugoworkflow/</link>
       <pubDate>Tue, 14 Jul 2015 19:36:59 +1000</pubDate>
       
-      <guid>http://localhost:1313/post/hugoworkflow/</guid>
+      <guid>https://danward79.github.io/post/hugoworkflow/</guid>
       <description>
 
 &lt;p&gt;There are &lt;em&gt;lots&lt;/em&gt; of articles about using Hugo with Github. They are all fairly complex. I spent sometime experimenting with them. in the end I decided, I wanted to simplify.&lt;/p&gt;
@@ -223,10 +152,10 @@ cd $srcPath
     
     <item>
       <title>Watchdog on the PI</title>
-      <link>http://localhost:1313/post/pi_watchdog/</link>
+      <link>https://danward79.github.io/post/pi_watchdog/</link>
       <pubDate>Mon, 13 Jul 2015 20:36:59 +1000</pubDate>
       
-      <guid>http://localhost:1313/post/pi_watchdog/</guid>
+      <guid>https://danward79.github.io/post/pi_watchdog/</guid>
       <description>
 
 &lt;p&gt;Sometimes, it&amp;rsquo;s handy to have someone on standby to reset a computer, when it freezes in explicably. There is a tool for this purpose. It&amp;rsquo;s called a &lt;a href=&#34;https://en.wikipedia.org/wiki/Watchdog_timer&#34;&gt;watchdog&lt;/a&gt;. On most of the PI&amp;rsquo;s I have had running I have setup a watchdog for this purpose.&lt;/p&gt;
@@ -311,10 +240,10 @@ sudo /etc/init.d/watchdog start
     
     <item>
       <title>Mosquitto on the PI</title>
-      <link>http://localhost:1313/post/mosquitto/</link>
+      <link>https://danward79.github.io/post/mosquitto/</link>
       <pubDate>Sun, 12 Jul 2015 20:36:59 +1000</pubDate>
       
-      <guid>http://localhost:1313/post/mosquitto/</guid>
+      <guid>https://danward79.github.io/post/mosquitto/</guid>
       <description>
 
 &lt;p&gt;MQTT is a publish/subscribe messaging system, &lt;a href=&#34;http://mosquitto.org/&#34;&gt;Mosquitto&lt;/a&gt; is on open source broker.&lt;/p&gt;

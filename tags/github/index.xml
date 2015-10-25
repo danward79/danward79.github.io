@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Github on Notes...</title>
-    <link>http://localhost:1313/tags/github/</link>
+    <link>https://danward79.github.io/tags/github/</link>
     <description>Recent content in Github on Notes...</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 14 Jul 2015 19:36:59 +1000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/github/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://danward79.github.io/tags/github/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Github &amp; Hugo workflow</title>
-      <link>http://localhost:1313/post/hugoworkflow/</link>
+      <link>https://danward79.github.io/post/hugoworkflow/</link>
       <pubDate>Tue, 14 Jul 2015 19:36:59 +1000</pubDate>
       
-      <guid>http://localhost:1313/post/hugoworkflow/</guid>
+      <guid>https://danward79.github.io/post/hugoworkflow/</guid>
       <description>
 
 &lt;p&gt;There are &lt;em&gt;lots&lt;/em&gt; of articles about using Hugo with Github. They are all fairly complex. I spent sometime experimenting with them. in the end I decided, I wanted to simplify.&lt;/p&gt;
