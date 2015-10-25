@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Code on Notes...</title>
+    <link>http://localhost:1313/tags/code/</link>
+    <description>Recent content in Code on Notes...</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 06 Sep 2015 17:45:50 +1000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/code/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Notes on Regex</title>
+      <link>http://localhost:1313/post/regex/</link>
+      <pubDate>Sun, 06 Sep 2015 17:45:50 +1000</pubDate>
+      
+      <guid>http://localhost:1313/post/regex/</guid>
+      <description>&lt;p&gt;I took some time regently
+sss&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

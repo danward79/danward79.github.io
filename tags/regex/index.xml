@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Regex on Notes...</title>
+    <link>http://localhost:1313/tags/regex/</link>
+    <description>Recent content in Regex on Notes...</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 06 Sep 2015 17:50:26 +1000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/regex/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Regex - Some Notes</title>
+      <link>http://localhost:1313/post/regex/</link>
+      <pubDate>Sun, 06 Sep 2015 17:50:26 +1000</pubDate>
+      
+      <guid>http://localhost:1313/post/regex/</guid>
+      <description>
+
+&lt;p&gt;Notes on regular expressions. Atom is a great test bed, the search function allows regex!&lt;/p&gt;
+
+&lt;h5 id=&#34;control-characters:1b46089a3311826c8e49477c918d1861&#34;&gt;Control characters&lt;/h5&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;\A	Start of string
+
+\z	End of string
+
+\b word boundary
+
+\d numeric characters, \D not numerics (i.e.. ^\d)
+
+\w word, \W not words
+
+\s space, \S not whitespace
+
+\n newline character
+
+\ escape character.
+
+? 0 or 1 times
+
++ 1 or more times
+
+^ &amp;amp; $ ^	Start of line, $	End of line
+
+^ negate
+
+* 0 or more times
+
+.	Any single character
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h5 id=&#34;grouping-ranges-and-interval-expressions:1b46089a3311826c8e49477c918d1861&#34;&gt;Grouping, Ranges and Interval Expressions&lt;/h5&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;() Group characters. For example:
+                      (a|b)	a or b
+
+?: non-capturing group
+
+[] Range. For example:
+          [abc]	A single character of: a, b, or c
+          [a-z]	Any single character in the range a-z
+          [a-zA-Z]	Any single character in the range a-z or A-Z          
+
+{} interval expression, {x} matches at least x times, {x,y} matches at least x.  times and upto y times. For example:
+                          a{3}	Exactly 3 of a
+                          a{3,}	3 or more of a
+                          a{3,6}	Between 3 and 6 of a
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h5 id=&#34;modifiers:1b46089a3311826c8e49477c918d1861&#34;&gt;Modifiers&lt;/h5&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;
+i ignore case
+m multiline modifier
+g global modifier
+
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

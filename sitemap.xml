@@ -2,33 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://danward79.github.io/</loc>
-    <lastmod>2015-08-24T19:21:19+10:00</lastmod>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2015-09-06T17:50:26+10:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://danward79.github.io/post/netremote/</loc>
+    <loc>http://localhost:1313/post/regex/</loc>
+    <lastmod>2015-09-06T17:50:26+10:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/netremote/</loc>
     <lastmod>2015-08-24T19:21:19+10:00</lastmod>
   </url>
   
   <url>
-    <loc>https://danward79.github.io/post/hugoworkflow/</loc>
+    <loc>http://localhost:1313/post/hugoworkflow/</loc>
     <lastmod>2015-07-14T19:36:59+10:00</lastmod>
   </url>
   
   <url>
-    <loc>https://danward79.github.io/post/pi_watchdog/</loc>
+    <loc>http://localhost:1313/post/pi_watchdog/</loc>
     <lastmod>2015-07-13T20:36:59+10:00</lastmod>
   </url>
   
   <url>
-    <loc>https://danward79.github.io/post/mosquitto/</loc>
+    <loc>http://localhost:1313/post/mosquitto/</loc>
     <lastmod>2015-07-12T20:36:59+10:00</lastmod>
   </url>
   
   <url>
-    <loc>https://danward79.github.io/about/</loc>
+    <loc>http://localhost:1313/about/</loc>
     <lastmod>2015-07-12T19:42:33+10:00</lastmod>
   </url>
   
