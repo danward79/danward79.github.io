@@ -310,7 +310,7 @@ sudo /etc/init.d/watchdog start
 
 &lt;h3 id=&#34;why&#34;&gt;Why&lt;/h3&gt;
 
-&lt;p&gt;Mainly just for my recollection and sometimes, I like to write some stuff. Another reason is to allow me to experiment with a static site build with Hugo and deployed using Github.&lt;/p&gt;
+&lt;p&gt;Mainly just for my recollection and sometimes, I like to write some stuff. Another reason is to allow me to experiment with a static site built with Hugo and deployed using Github.&lt;/p&gt;
 
 &lt;h3 id=&#34;when&#34;&gt;When&lt;/h3&gt;
 
