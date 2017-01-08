@@ -98,7 +98,8 @@
     </div>
   </header>
   <div>
-    Sometimes, it&rsquo;s handy to have someone on standby to reset a computer, when it freezes in explicably. There is a tool for this purpose. It&rsquo;s called a watchdog. On most of the PI&rsquo;s I have had running I have setup a watchdog for this purpose. In short a watchdog, will cause either a hard or soft reset to occur, if it is not kicked by the system often enough. The kick is assumed to indicate an operating system.
+    Sometimes, it&rsquo;s handy to have someone on standby to reset a computer, when it freezes in explicably. There is a tool for this purpose. It&rsquo;s called a watchdog. On most of the PI&rsquo;s I have had running I have setup a watchdog for this purpose.
+In short a watchdog, will cause either a hard or soft reset to occur, if it is not kicked by the system often enough. The kick is assumed to indicate an operating system.
   </div>
   
   <footer>
@@ -124,7 +125,10 @@
     </div>
   </header>
   <div>
-    MQTT is a publish/subscribe messaging system, Mosquitto is on open source broker. Install main package From the command line sudo apt-get install mosquitto Install command Line tools sudo apt-get install mosquitto-clients Install C Dev Libraries sudo apt-get install libmosquitto0-dev libmosquittopp0-dev Test subscription mosquitto_sub -v -t ‘#’ or alternatively mosquitto_sub -v -t ‘#’ | xxd
+     MQTT is a publish/subscribe messaging system, Mosquitto is on open source broker.
+Install main package From the command line
+sudo apt-get install mosquitto  Install command Line tools sudo apt-get install mosquitto-clients  Install C Dev Libraries sudo apt-get install libmosquitto0-dev libmosquittopp0-dev  Test subscription mosquitto_sub -v -t ‘#’  or alternatively
+mosquitto_sub -v -t ‘#’ | xxd  
   </div>
   
 </article>

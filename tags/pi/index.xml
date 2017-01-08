@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Pi on Notes...</title>
-    <link>https://danward79.github.io/tags/pi/</link>
-    <description>Recent content in Pi on Notes...</description>
+    <title>Notes...</title>
+    <link>https://danward79.github.io/tags/pi/index.xml</link>
+    <description>Recent content on Notes...</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 13 Jul 2015 20:36:59 +1000</lastBuildDate>
     <atom:link href="https://danward79.github.io/tags/pi/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
@@ -21,7 +20,7 @@
 
 &lt;p&gt;In short a watchdog, will cause either a hard or soft reset to occur, if it is not kicked by the system often enough. The kick is assumed to indicate an operating system.&lt;/p&gt;
 
-&lt;h4 id=&#34;to-install-on-the-raspberry-pi:ee3c7ffdd9fa821c46a9edb3b07acd26&#34;&gt;To install on the Raspberry PI.&lt;/h4&gt;
+&lt;h4 id=&#34;to-install-on-the-raspberry-pi&#34;&gt;To install on the Raspberry PI.&lt;/h4&gt;
 
 &lt;p&gt;From the command line on a standard Rasbian install.&lt;/p&gt;
 
@@ -77,7 +76,7 @@ sudo /etc/init.d/watchdog start
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo /etc/init.d/watchdog restart
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;test-it:ee3c7ffdd9fa821c46a9edb3b07acd26&#34;&gt;Test it&lt;/h4&gt;
+&lt;h4 id=&#34;test-it&#34;&gt;Test it&lt;/h4&gt;
 
 &lt;p&gt;To test, lets force the PI to crash. This is known as a Fork-Bomb! Disable swap and then.&lt;/p&gt;
 
@@ -89,7 +88,7 @@ sudo /etc/init.d/watchdog start
 
 &lt;p&gt;You can disable it permanently with: sudo update-rc.d -f watchdog remove OR sudo systemctl disable watchdog.service﻿&lt;/p&gt;
 
-&lt;h6 id=&#34;references:ee3c7ffdd9fa821c46a9edb3b07acd26&#34;&gt;References&lt;/h6&gt;
+&lt;h6 id=&#34;references&#34;&gt;References&lt;/h6&gt;
 
 &lt;ol&gt;
 &lt;li&gt;&lt;a href=&#34;https://rpihouse.wordpress.com/2012/12/06/watching-the-dog/&#34;&gt;Watching the dog.&lt;/a&gt;&lt;/li&gt;
@@ -107,24 +106,24 @@ sudo /etc/init.d/watchdog start
 
 &lt;p&gt;MQTT is a publish/subscribe messaging system, &lt;a href=&#34;http://mosquitto.org/&#34;&gt;Mosquitto&lt;/a&gt; is on open source broker.&lt;/p&gt;
 
-&lt;h3 id=&#34;install-main-package:c9eb20fb0f7b1c8c904be7dde2286ece&#34;&gt;Install main package&lt;/h3&gt;
+&lt;h3 id=&#34;install-main-package&#34;&gt;Install main package&lt;/h3&gt;
 
 &lt;p&gt;From the command line&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo apt-get install mosquitto
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;install-command-line-tools:c9eb20fb0f7b1c8c904be7dde2286ece&#34;&gt;Install command Line tools&lt;/h3&gt;
+&lt;h3 id=&#34;install-command-line-tools&#34;&gt;Install command Line tools&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo apt-get install mosquitto-clients
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;install-c-dev-libraries:c9eb20fb0f7b1c8c904be7dde2286ece&#34;&gt;Install C Dev Libraries&lt;/h3&gt;
+&lt;h3 id=&#34;install-c-dev-libraries&#34;&gt;Install C Dev Libraries&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo apt-get install libmosquitto0-dev libmosquittopp0-dev
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;test-subscription:c9eb20fb0f7b1c8c904be7dde2286ece&#34;&gt;Test subscription&lt;/h3&gt;
+&lt;h3 id=&#34;test-subscription&#34;&gt;Test subscription&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;mosquitto_sub -v -t ‘#’
 

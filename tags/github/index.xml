@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Github on Notes...</title>
-    <link>https://danward79.github.io/tags/github/</link>
-    <description>Recent content in Github on Notes...</description>
+    <title>Notes...</title>
+    <link>https://danward79.github.io/tags/github/index.xml</link>
+    <description>Recent content on Notes...</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 14 Jul 2015 19:36:59 +1000</lastBuildDate>
     <atom:link href="https://danward79.github.io/tags/github/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
@@ -19,7 +18,7 @@
 
 &lt;p&gt;There are &lt;em&gt;lots&lt;/em&gt; of articles about using Hugo with Github. They are all fairly complex. I spent sometime experimenting with them. in the end I decided, I wanted to simplify.&lt;/p&gt;
 
-&lt;h4 id=&#34;requirements:35dd500d9fc6389edf36965b29c56138&#34;&gt;Requirements&lt;/h4&gt;
+&lt;h4 id=&#34;requirements&#34;&gt;Requirements&lt;/h4&gt;
 
 &lt;p&gt;The requirements for me are:&lt;/p&gt;
 
@@ -29,13 +28,13 @@
 &lt;li&gt;Simple, minimal steps from me.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h4 id=&#34;workflow:35dd500d9fc6389edf36965b29c56138&#34;&gt;Workflow&lt;/h4&gt;
+&lt;h4 id=&#34;workflow&#34;&gt;Workflow&lt;/h4&gt;
 
 &lt;p&gt;This setup will enable me to work in Atom editor on posts, which are saved in the source folder.&lt;/p&gt;
 
 &lt;p&gt;On completion of a post. Running the deploy command, will compile the site and move the content to the repo, then commit and push the changes to github.&lt;/p&gt;
 
-&lt;h4 id=&#34;setup:35dd500d9fc6389edf36965b29c56138&#34;&gt;Setup&lt;/h4&gt;
+&lt;h4 id=&#34;setup&#34;&gt;Setup&lt;/h4&gt;
 
 &lt;p&gt;Assuming you have hugo and git installed on your machine and setup.&lt;/p&gt;
 
@@ -53,7 +52,7 @@
 &lt;li&gt;deploy.sh is the script that compiles and deploys&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&#34;deployment-script-deploy-sh:35dd500d9fc6389edf36965b29c56138&#34;&gt;Deployment Script - deploy.sh&lt;/h4&gt;
+&lt;h4 id=&#34;deployment-script-deploy-sh&#34;&gt;Deployment Script - deploy.sh&lt;/h4&gt;
 
 &lt;p&gt;The deploy script is shown below. It would need editting to suit your setup and situation.&lt;/p&gt;
 

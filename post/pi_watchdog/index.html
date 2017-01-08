@@ -110,7 +110,7 @@
 
 <p>In short a watchdog, will cause either a hard or soft reset to occur, if it is not kicked by the system often enough. The kick is assumed to indicate an operating system.</p>
 
-<h4 id="to-install-on-the-raspberry-pi:ee3c7ffdd9fa821c46a9edb3b07acd26">To install on the Raspberry PI.</h4>
+<h4 id="to-install-on-the-raspberry-pi">To install on the Raspberry PI.</h4>
 
 <p>From the command line on a standard Rasbian install.</p>
 
@@ -166,7 +166,7 @@ sudo /etc/init.d/watchdog start
 <pre><code class="language-bash">sudo /etc/init.d/watchdog restart
 </code></pre>
 
-<h4 id="test-it:ee3c7ffdd9fa821c46a9edb3b07acd26">Test it</h4>
+<h4 id="test-it">Test it</h4>
 
 <p>To test, lets force the PI to crash. This is known as a Fork-Bomb! Disable swap and then.</p>
 
@@ -178,7 +178,7 @@ sudo /etc/init.d/watchdog start
 
 <p>You can disable it permanently with: sudo update-rc.d -f watchdog remove OR sudo systemctl disable watchdog.service﻿</p>
 
-<h6 id="references:ee3c7ffdd9fa821c46a9edb3b07acd26">References</h6>
+<h6 id="references">References</h6>
 
 <ol>
 <li><a href="https://rpihouse.wordpress.com/2012/12/06/watching-the-dog/">Watching the dog.</a></li>
