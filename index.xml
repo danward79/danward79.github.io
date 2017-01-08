@@ -302,7 +302,7 @@ sudo /etc/init.d/watchdog start
 
 &lt;h3 id=&#34;what&#34;&gt;What&lt;/h3&gt;
 
-&lt;p&gt;On these pages you&amp;rsquo;ll find some short posts about things/projects/info, which I have taken notes to remember. These pages are for me to recall, how I have done a task and are as such my &amp;ldquo;Note Book&amp;rdquo;. I happen to share them, as I hope someone else may find them useful.&lt;/p&gt;
+&lt;p&gt;On these pages you&amp;rsquo;ll find some short posts about things/projects/info, which I have taken notes to remember. These pages are for me to recall how I have completed a task and are as such my &amp;ldquo;Note Book&amp;rdquo;. I happen to share them, as I hope someone else may find them useful.&lt;/p&gt;
 
 &lt;p&gt;You may also from time to time see &amp;ldquo;other&amp;rdquo; posts. Which will be of anything I choose. Such as flashes of past work or anything else I choose to publish.&lt;/p&gt;
 
@@ -310,7 +310,7 @@ sudo /etc/init.d/watchdog start
 
 &lt;h3 id=&#34;why&#34;&gt;Why&lt;/h3&gt;
 
-&lt;p&gt;Mainly just for my recollection and sometimes, I like to write some stuff.&lt;/p&gt;
+&lt;p&gt;Mainly just for my recollection and sometimes, I like to write some stuff. Another reason is to allow me to experiment with a static site build with Hugo and deployed using Github.&lt;/p&gt;
 
 &lt;h3 id=&#34;when&#34;&gt;When&lt;/h3&gt;
 
@@ -320,7 +320,7 @@ sudo /etc/init.d/watchdog start
 
 &lt;h3 id=&#34;my-other-site&#34;&gt;My Other Site&lt;/h3&gt;
 
-&lt;p&gt;If you are interested you may want to have a look at my travel Blog. &lt;a href=&#34;http://www.africanuhambo.co.uk&#34;&gt;African Uhambo&lt;/a&gt;, which describes some overland travel stories about my little family&amp;rsquo;s adventures in contental Europe, over a few years. Since moving to Australia we have not updated it. But will again do so in the future.&lt;/p&gt;
+&lt;p&gt;If you are interested you may want to have a look at my travel Blog. &lt;a href=&#34;http://www.africanuhambo.co.uk&#34;&gt;African Uhambo&lt;/a&gt;, which describes some overland travel stories about my little family&amp;rsquo;s adventures in continental Europe, over a few years. Since moving to Australia we have not updated it. But will again do so in the future.&lt;/p&gt;
 </description>
     </item>
     
