@@ -155,13 +155,12 @@ echo 'Building changes'
 hugo
 
 echo 'Moving changes to repo'
-#cd $deployPath/
+cd $deployPath/
 #rm -rf *
 cp -R $srcPath/public/ $deployPath
 echo $baseURL &gt; CNAME
 
 echo 'Checkout changes'
-cd $deployPath
 git checkout $branch
 git add -A
 

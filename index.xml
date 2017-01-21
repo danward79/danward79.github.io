@@ -6,8 +6,164 @@
     <description>Recent content on Notes...</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 24 Aug 2015 19:21:19 +1000</lastBuildDate>
+    <lastBuildDate>Sat, 14 Jan 2017 21:06:05 +1100</lastBuildDate>
     <atom:link href="https://danward79.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Moving from Wordpress.com to Github</title>
+      <link>https://danward79.github.io/post/wordpress-to-github/</link>
+      <pubDate>Sat, 14 Jan 2017 21:06:05 +1100</pubDate>
+      
+      <guid>https://danward79.github.io/post/wordpress-to-github/</guid>
+      <description>
+
+&lt;h3 id=&#34;introduction&#34;&gt;Introduction&lt;/h3&gt;
+
+&lt;p&gt;We have a travel &lt;a href=&#34;https://africanuhambo.co.uk&#34;&gt;blog&lt;/a&gt;, which has some stories and accounts from our travels in Europe. Until we recently moved to Australia, it was updated on a semi-regular basis, however now it is mostly dormant. It was hosted on Wordpress.com. As it is mostly simple content, I have wanted to convert the site to a static site, so that I could have it hosted elsewhere for free. This move has been on the cards for a long time.&lt;/p&gt;
+
+&lt;p&gt;Although Wordpress is free and pretty decent for almost all of us, I just liked the idea of having the site static and simple. Recent scares with Yahoo hacks, etc gave me the hee-bee jeebies (spelling?). Wordpress is pretty popular, I think they say 27% of the web is served by a Wordpress site. That does go a long way to show that many other think Wordpress is great too.&lt;/p&gt;
+
+&lt;p&gt;The only disadvantage to Wordpress was paying for certain services. I paid only for the custom domain support, which is almost nothing a year, it was probably not worth changing just on this basis. I would imagine the resources required to serve the new static version of the blog are somewhat lower, so that is a tenuous environmental advantage to moving.&lt;/p&gt;
+
+&lt;p&gt;I guess the main driver for moving was the technical challenge.&lt;/p&gt;
+
+&lt;p&gt;Disadvantages of hosting a static site at Github are that it does not fully support https for custom domains. However there are ways around this and it does support https for &lt;em&gt;.github.io&lt;/em&gt; domains. There are ways round this, which i&amp;rsquo;ll explain later.&lt;/p&gt;
+
+&lt;p&gt;This post is mainly about the process I used to change from a Wordpress.com hosted site to a Hugo site, served with https via a custom domain and hosted by Github. The later part, I&amp;rsquo;ll discuss in another post.&lt;/p&gt;
+
+&lt;h3 id=&#34;the-basic-process&#34;&gt;The basic process&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;Warning:&lt;/em&gt; The process is fairly arduous and there may be a simpler way. The basic process is as follows:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Export your Wordpress site XML files&lt;/li&gt;
+&lt;li&gt;Install Jekyll&lt;/li&gt;
+&lt;li&gt;Import Wordpress site to Jekyll&lt;/li&gt;
+&lt;li&gt;Install Hugo&lt;/li&gt;
+&lt;li&gt;Import Jekyll site to Hugo&lt;/li&gt;
+&lt;li&gt;Do a lot of formatting and checking&lt;/li&gt;
+&lt;li&gt;Create Github repo&lt;/li&gt;
+&lt;li&gt;Deploy to Github&lt;/li&gt;
+&lt;li&gt;Setup custom domain, https, etc (subject of another post possibly)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&#34;steps&#34;&gt;Steps&lt;/h3&gt;
+
+&lt;h4 id=&#34;1-export-your-wordpress-site-xml-files&#34;&gt;1. Export your Wordpress site XML files&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Head over to Wordpress.com and navigate to Tools &amp;gt; Export. The Tools menu is under &amp;ldquo;WP Admin&amp;rdquo; in wordpress.com.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Under the free export option, start the export and select &amp;ldquo;All content&amp;rdquo; then start the download, by click &amp;ldquo;Download Export File&amp;rdquo;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;You can also use this URL to get to the tool directly, just put in your username:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;https://USERNAME.wordpress.com/wp-admin/export.php
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;You&amp;rsquo;ll need the xml file in the download later, so make a note of where it is saved.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;2-install-jekyll-jekyll-importer&#34;&gt;2. Install Jekyll &amp;amp; Jekyll Importer&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Install Jekyll, by following the instructions on &lt;a href=&#34;https://jekyllrb.com/docs/installation/&#34;&gt;this&lt;/a&gt; page.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;If you have all the prerequisites installed, simply use the following command.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;gem install jekyll
+gem install jekyll-import
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You can check if Jekyll has been installed or is installed, using:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;jekyll --version
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;3-import-wordpress-site-to-jekyll&#34;&gt;3. Import Wordpress site to Jekyll&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Use the Jekyll import tool to import the Wordpress posts, this will read the export xml and grab all your content, images etc.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We&amp;rsquo;ll be using the instructions on &lt;a href=&#34;http://import.jekyllrb.com/docs/wordpressdotcom/&#34;&gt;this&lt;/a&gt; page to guide us.&lt;/p&gt;
+
+&lt;p&gt;I ran the command below from the location I had the export saved, you&amp;rsquo;ll need to rename &amp;ldquo;wordpress.xml&amp;rdquo; to your export name or alternatively rename you export to wordpress.xml.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;ruby -rubygems -e &#39;require &amp;quot;jekyll-import&amp;quot;;
+    JekyllImport::Importers::WordpressDotCom.run({
+      &amp;quot;source&amp;quot; =&amp;gt; &amp;quot;wordpress.xml&amp;quot;,
+      &amp;quot;no_fetch_images&amp;quot; =&amp;gt; false,
+      &amp;quot;assets_folder&amp;quot; =&amp;gt; &amp;quot;assets&amp;quot;
+    })&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;4-install-hugo&#34;&gt;4. Install Hugo&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Install Hugo&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;brew install Hugo
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Check it is installed with&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;hugo version
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;If you are not using &lt;a href=&#34;http://brew.sh&#34;&gt;homebrew&lt;/a&gt;, follow the instructions on &lt;a href=&#34;https://gohugo.io&#34;&gt;this&lt;/a&gt; page to install Hugo.&lt;/p&gt;
+
+&lt;h4 id=&#34;5-import-jekyll-site-to-hugo&#34;&gt;5. Import Jekyll site to Hugo&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Use the following command to import Jekyll to a Hugo site&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;hugo import jekyll JekyllSitePath HugoSitePath
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;6-do-a-lot-of-formatting-and-checking&#34;&gt;6. Do a lot of formatting and checking&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;After the script has success fully completed you&amp;rsquo;ll need to run the Hugo server from your Hugo site path
+&lt;code&gt;
+hugo serve
+&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;You&amp;rsquo;ll probably navigate to localhost:1313 and be greeted with a blank page. That will be because you need a theme. In which case:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;cd themes
+git clone https://github.com/vjeantet/hugo-theme-casper casper
+cd ..
+hugo server -t casper -D
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This will load your site with a folder watch. You&amp;rsquo;ll note a lot of formatting issues. You&amp;rsquo;ll need to work through each post and fix the issues 1 by 1!&lt;/p&gt;
+
+&lt;h4 id=&#34;7-create-github-repo&#34;&gt;7. Create Github repo&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;I don&amp;rsquo;t intend to go through this bit by bit, there is a guide &lt;a href=&#34;https://pages.github.com&#34;&gt;here&lt;/a&gt; to follow.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;8-deploy-to-github&#34;&gt;8. Deploy to Github&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;I use the method described in &lt;a href=&#34;https://danward79.github.io/post/hugoworkflow/&#34;&gt;here&lt;/a&gt; to build and deploy. There are several methods. Feel free to find your best option.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;9-setup-custom-domain-https-etc-subject-of-another-post&#34;&gt;9. Setup custom domain, https, etc (subject of another post)&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Watch this space! I need to move this blog to be served by https/ssl so, I&amp;rsquo;ll show you the steps then.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>Blast from the Past - Netremote Pocket PC Screen shots</title>
@@ -126,13 +282,12 @@ echo &#39;Building changes&#39;
 hugo
 
 echo &#39;Moving changes to repo&#39;
-#cd $deployPath/
+cd $deployPath/
 #rm -rf *
 cp -R $srcPath/public/ $deployPath
 echo $baseURL &amp;gt; CNAME
 
 echo &#39;Checkout changes&#39;
-cd $deployPath
 git checkout $branch
 git add -A
 
