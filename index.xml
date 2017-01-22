@@ -6,8 +6,154 @@
     <description>Recent content on Notes...</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 14 Jan 2017 21:06:05 +1100</lastBuildDate>
+    <lastBuildDate>Sun, 22 Jan 2017 20:58:55 +1100</lastBuildDate>
     <atom:link href="https://danward79.co.uk/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Deploy to github using ssl</title>
+      <link>https://danward79.co.uk/post/deploy-to-github-using-ssl/</link>
+      <pubDate>Sun, 22 Jan 2017 20:58:55 +1100</pubDate>
+      
+      <guid>https://danward79.co.uk/post/deploy-to-github-using-ssl/</guid>
+      <description>
+
+&lt;h3 id=&#34;introduction&#34;&gt;Introduction&lt;/h3&gt;
+
+&lt;p&gt;Deploying a static site on Github is great, they&amp;rsquo;ll even serve it over https, if your using there &amp;lsquo;&lt;em&gt;username.github.io&lt;/em&gt;&amp;rsquo; domain. If you want to use a custom domain however, you will soon find out that https, is not longer available.&lt;/p&gt;
+
+&lt;p&gt;Below, I&amp;rsquo;ll outline how I went about solving this problem using cloudflare. There are probably many ways to do this, so as ever do your research. This is just one of the solutions and I am not saying I did not miss anything!&lt;/p&gt;
+
+&lt;h3 id=&#34;github-config&#34;&gt;Github config&lt;/h3&gt;
+
+&lt;p&gt;There are a couple of things you need to do on the github side of things.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Ensure your repo has a CNAME file, in the case of this site it contains:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;https://danward79.co.uk
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;In the settings for your repo, ensure that custom domain is set to your base address, in the case of this site, that is:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;danward79.co.uk
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&#34;hugo-config&#34;&gt;Hugo config&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;In your site config file, you will need to set the baseurl to match the custom domain your using. So in the case of this site it will be:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;baseurl = &amp;quot;https://danward79.co.uk/&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&#34;cloudflare-config&#34;&gt;Cloudflare config&lt;/h3&gt;
+
+&lt;p&gt;There are a few steps here that are required.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Make sure you have a &lt;a href=&#34;https://www.cloudflare.com&#34;&gt;cloudflare&lt;/a&gt; account setup.&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;In cloudflare, click the &amp;lsquo;+ Add Site&amp;rsquo;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;In the dialogue that appears enter your base domain and click begin scan:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;danward79.co.uk
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Cloudflare will start scanning your site. Once you see the button &amp;lsquo;Continue Setup&amp;rsquo; click it.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Next you will need to setup DNS records.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Select &amp;lsquo;CNAME&amp;rsquo; from the lefthand dropdown.&lt;/li&gt;
+&lt;li&gt;In &amp;lsquo;name&amp;rsquo; type your domain base url:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;  danward79.co.uk
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;In &amp;lsquo;domain name&amp;rsquo; enter your github pages url:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;  danward79.github.io
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The last dropdown should be &amp;lsquo;Automatic TTL&amp;rsquo;&lt;/li&gt;
+&lt;li&gt;Click &amp;lsquo;add record&amp;rsquo;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Next repeat for www&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Select &amp;lsquo;CNAME&amp;rsquo; from the lefthand dropdown.&lt;/li&gt;
+&lt;li&gt;In &amp;lsquo;name&amp;rsquo; type:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;  www
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;In &amp;lsquo;domain name&amp;rsquo; enter your github pages url:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;  danward79.github.io
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The last dropdown should be &amp;lsquo;Automatic TTL&amp;rsquo;&lt;/li&gt;
+&lt;li&gt;Click &amp;lsquo;add record&amp;rsquo;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Click &amp;lsquo;continue&amp;rsquo; when your done.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Select &amp;lsquo;Free&amp;rsquo; on the plan page and click &amp;lsquo;continue&amp;rsquo;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;The next page will give you nameserver details. &lt;strong&gt;Note these&lt;/strong&gt;, then click continue&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;In your admin page for the domain. Click &amp;lsquo;crypto&amp;rsquo;, then ensure &amp;lsquo;SSL&amp;rsquo; is set to &amp;lsquo;Full&amp;rsquo;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;In the admin page, click &amp;lsquo;page rules&amp;rsquo;.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&amp;lsquo;Create Page Rule&amp;rsquo;&lt;/li&gt;
+&lt;li&gt;Enter this in the URL:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;  http://*danward79.co.uk/*
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;In &amp;lsquo;Pick a setting&amp;rsquo;, choose &amp;lsquo;Always use https&amp;rsquo;&lt;/li&gt;
+&lt;li&gt;Then save and deploy&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&#34;domain-registar&#34;&gt;Domain registar&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Head over to your domain registar and proceed to your registar&amp;rsquo;s control panel to change your nameserver records.&lt;/li&gt;
+&lt;li&gt;Enter the nameserver details as you noted above in step 8.&lt;/li&gt;
+&lt;li&gt;Ensure your registar has no other CNAME records etc.&lt;/li&gt;
+&lt;li&gt;Save the details and exit.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&#34;update-and-deploy&#34;&gt;Update and deploy&lt;/h3&gt;
+
+&lt;p&gt;Next the final step is to make sure you update and deploy your site to Github with all the above.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;NOTE:&lt;/em&gt; It will take some time (up to 24 hours) for all the settings to work, some automagic needs to happen in the interweb. Mine took about 3 hours.&lt;/p&gt;
+
+&lt;p&gt;Hope that helps someone.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Moving from Wordpress.com to Github</title>
