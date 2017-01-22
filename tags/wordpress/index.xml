@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Wordpress on Notes...</title>
-    <link>https://danward79.github.io/tags/wordpress/index.xml</link>
+    <link>https://danward79.co.uk/tags/wordpress/index.xml</link>
     <description>Recent content in Wordpress on Notes...</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="https://danward79.github.io/tags/wordpress/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://danward79.co.uk/tags/wordpress/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Moving from Wordpress.com to Github</title>
-      <link>https://danward79.github.io/post/wordpress-to-github/</link>
+      <link>https://danward79.co.uk/post/wordpress-to-github/</link>
       <pubDate>Sat, 14 Jan 2017 21:06:05 +1100</pubDate>
       
-      <guid>https://danward79.github.io/post/wordpress-to-github/</guid>
+      <guid>https://danward79.co.uk/post/wordpress-to-github/</guid>
       <description>
 
 &lt;h3 id=&#34;introduction&#34;&gt;Introduction&lt;/h3&gt;
@@ -153,7 +153,7 @@ hugo server -t casper -D
 &lt;h4 id=&#34;8-deploy-to-github&#34;&gt;8. Deploy to Github&lt;/h4&gt;
 
 &lt;ul&gt;
-&lt;li&gt;I use the method described in &lt;a href=&#34;https://danward79.github.io/post/hugoworkflow/&#34;&gt;here&lt;/a&gt; to build and deploy. There are several methods. Feel free to find your best option.&lt;/li&gt;
+&lt;li&gt;I use the method described in &lt;a href=&#34;https://danward79.co.uk/post/hugoworkflow/&#34;&gt;here&lt;/a&gt; to build and deploy. There are several methods. Feel free to find your best option.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h4 id=&#34;9-setup-custom-domain-https-etc-subject-of-another-post&#34;&gt;9. Setup custom domain, https, etc (subject of another post)&lt;/h4&gt;

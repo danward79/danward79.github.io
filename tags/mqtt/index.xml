@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Mqtt on Notes...</title>
-    <link>https://danward79.github.io/tags/mqtt/index.xml</link>
+    <link>https://danward79.co.uk/tags/mqtt/index.xml</link>
     <description>Recent content in Mqtt on Notes...</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="https://danward79.github.io/tags/mqtt/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://danward79.co.uk/tags/mqtt/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Mosquitto on the PI</title>
-      <link>https://danward79.github.io/post/mosquitto/</link>
+      <link>https://danward79.co.uk/post/mosquitto/</link>
       <pubDate>Sun, 12 Jul 2015 20:36:59 +1000</pubDate>
       
-      <guid>https://danward79.github.io/post/mosquitto/</guid>
+      <guid>https://danward79.co.uk/post/mosquitto/</guid>
       <description>
 
 &lt;p&gt;MQTT is a publish/subscribe messaging system, &lt;a href=&#34;http://mosquitto.org/&#34;&gt;Mosquitto&lt;/a&gt; is on open source broker.&lt;/p&gt;

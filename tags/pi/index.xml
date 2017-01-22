@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pi on Notes...</title>
-    <link>https://danward79.github.io/tags/pi/index.xml</link>
+    <link>https://danward79.co.uk/tags/pi/index.xml</link>
     <description>Recent content in Pi on Notes...</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="https://danward79.github.io/tags/pi/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://danward79.co.uk/tags/pi/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Watchdog on the PI</title>
-      <link>https://danward79.github.io/post/pi_watchdog/</link>
+      <link>https://danward79.co.uk/post/pi_watchdog/</link>
       <pubDate>Mon, 13 Jul 2015 20:36:59 +1000</pubDate>
       
-      <guid>https://danward79.github.io/post/pi_watchdog/</guid>
+      <guid>https://danward79.co.uk/post/pi_watchdog/</guid>
       <description>
 
 &lt;p&gt;Sometimes, it&amp;rsquo;s handy to have someone on standby to reset a computer, when it freezes in explicably. There is a tool for this purpose. It&amp;rsquo;s called a &lt;a href=&#34;https://en.wikipedia.org/wiki/Watchdog_timer&#34;&gt;watchdog&lt;/a&gt;. On most of the PI&amp;rsquo;s I have had running I have setup a watchdog for this purpose.&lt;/p&gt;
@@ -98,10 +98,10 @@ sudo /etc/init.d/watchdog start
     
     <item>
       <title>Mosquitto on the PI</title>
-      <link>https://danward79.github.io/post/mosquitto/</link>
+      <link>https://danward79.co.uk/post/mosquitto/</link>
       <pubDate>Sun, 12 Jul 2015 20:36:59 +1000</pubDate>
       
-      <guid>https://danward79.github.io/post/mosquitto/</guid>
+      <guid>https://danward79.co.uk/post/mosquitto/</guid>
       <description>
 
 &lt;p&gt;MQTT is a publish/subscribe messaging system, &lt;a href=&#34;http://mosquitto.org/&#34;&gt;Mosquitto&lt;/a&gt; is on open source broker.&lt;/p&gt;

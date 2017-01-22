@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Notes...</title>
-    <link>https://danward79.github.io/index.xml</link>
+    <link>https://danward79.co.uk/index.xml</link>
     <description>Recent content on Notes...</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 14 Jan 2017 21:06:05 +1100</lastBuildDate>
-    <atom:link href="https://danward79.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://danward79.co.uk/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Moving from Wordpress.com to Github</title>
-      <link>https://danward79.github.io/post/wordpress-to-github/</link>
+      <link>https://danward79.co.uk/post/wordpress-to-github/</link>
       <pubDate>Sat, 14 Jan 2017 21:06:05 +1100</pubDate>
       
-      <guid>https://danward79.github.io/post/wordpress-to-github/</guid>
+      <guid>https://danward79.co.uk/post/wordpress-to-github/</guid>
       <description>
 
 &lt;h3 id=&#34;introduction&#34;&gt;Introduction&lt;/h3&gt;
@@ -154,7 +154,7 @@ hugo server -t casper -D
 &lt;h4 id=&#34;8-deploy-to-github&#34;&gt;8. Deploy to Github&lt;/h4&gt;
 
 &lt;ul&gt;
-&lt;li&gt;I use the method described in &lt;a href=&#34;https://danward79.github.io/post/hugoworkflow/&#34;&gt;here&lt;/a&gt; to build and deploy. There are several methods. Feel free to find your best option.&lt;/li&gt;
+&lt;li&gt;I use the method described in &lt;a href=&#34;https://danward79.co.uk/post/hugoworkflow/&#34;&gt;here&lt;/a&gt; to build and deploy. There are several methods. Feel free to find your best option.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h4 id=&#34;9-setup-custom-domain-https-etc-subject-of-another-post&#34;&gt;9. Setup custom domain, https, etc (subject of another post)&lt;/h4&gt;
@@ -167,10 +167,10 @@ hugo server -t casper -D
     
     <item>
       <title>Blast from the Past - Netremote Pocket PC Screen shots</title>
-      <link>https://danward79.github.io/post/netremote/</link>
+      <link>https://danward79.co.uk/post/netremote/</link>
       <pubDate>Mon, 24 Aug 2015 19:21:19 +1000</pubDate>
       
-      <guid>https://danward79.github.io/post/netremote/</guid>
+      <guid>https://danward79.co.uk/post/netremote/</guid>
       <description>
 
 &lt;h2 id=&#34;the-past&#34;&gt;The Past&lt;/h2&gt;
@@ -200,19 +200,19 @@ hugo server -t casper -D
 &lt;table style=&#34;width: 100%; height: 100%; text-align: left; margin-left: auto; margin-right: auto;&#34; border=&#34;0&#34; cellpadding=&#34;2&#34; cellspacing=&#34;2&#34;&gt;
   &lt;tbody&gt;
   &lt;tr&gt;
-    &lt;td style=&#34;text-align: center; vertical-align: middle;&#34;&gt;&lt;img style=&#34;width: 243px; height: 322px;&#34; alt=&#34;&#34; title=&#34;OPUS Skin Home Page&#34; src=&#34;https://danward79.github.io/static/ppchome.jpg&#34; align=&#34;middle&#34;&gt;&lt;br&gt;Home Page&lt;/td&gt;
-    &lt;td style=&#34;text-align: center;&#34;&gt;&lt;img style=&#34;width: 243px; height: 322px;&#34; alt=&#34;&#34; title=&#34;Weather Conditions&#34; src=&#34;https://danward79.github.io/static/ppcweathercond.jpg&#34;&gt;&lt;br&gt;Current Conditions&lt;/td&gt;
-    &lt;td style=&#34;text-align: center;&#34;&gt;&lt;img style=&#34;width: 243px; height: 320px;&#34; alt=&#34;&#34; title=&#34;Weather Radar&#34; src=&#34;https://danward79.github.io/static/ppcweatherradar.jpg&#34;&gt;&lt;br&gt;Current Weather Radar&lt;/td&gt;
+    &lt;td style=&#34;text-align: center; vertical-align: middle;&#34;&gt;&lt;img style=&#34;width: 243px; height: 322px;&#34; alt=&#34;&#34; title=&#34;OPUS Skin Home Page&#34; src=&#34;https://danward79.co.uk/static/ppchome.jpg&#34; align=&#34;middle&#34;&gt;&lt;br&gt;Home Page&lt;/td&gt;
+    &lt;td style=&#34;text-align: center;&#34;&gt;&lt;img style=&#34;width: 243px; height: 322px;&#34; alt=&#34;&#34; title=&#34;Weather Conditions&#34; src=&#34;https://danward79.co.uk/static/ppcweathercond.jpg&#34;&gt;&lt;br&gt;Current Conditions&lt;/td&gt;
+    &lt;td style=&#34;text-align: center;&#34;&gt;&lt;img style=&#34;width: 243px; height: 320px;&#34; alt=&#34;&#34; title=&#34;Weather Radar&#34; src=&#34;https://danward79.co.uk/static/ppcweatherradar.jpg&#34;&gt;&lt;br&gt;Current Weather Radar&lt;/td&gt;
     &lt;/tr&gt;&lt;tr&gt;
-    &lt;td style=&#34;text-align: center;&#34;&gt;&lt;img style=&#34;width: 243px; height: 320px;&#34; alt=&#34;&#34; title=&#34;Weather Forecast&#34; src=&#34;https://danward79.github.io/static/ppcweatherforecast.jpg&#34;&gt;&lt;br&gt;Forecast&lt;/td&gt;
-    &lt;td style=&#34;text-align: center;&#34;&gt;&lt;img style=&#34;width: 243px; height: 321px;&#34; alt=&#34;&#34; title=&#34;Offshore Sea Conditions and Local Tides&#34; src=&#34;https://danward79.github.io/static/ppctidalseaconditions.jpg&#34;&gt;&lt;br&gt;Tidal and Sea Conditions&lt;/td&gt;
-    &lt;td style=&#34;text-align: center;&#34;&gt;&lt;img style=&#34;width: 242px; height: 321px;&#34; alt=&#34;&#34; title=&#34;DVD Juke Box - Covers Page&#34; src=&#34;https://danward79.github.io/static/ppcldjcovers.jpg&#34;&gt;&lt;br&gt;DVD Jukebox - Covers View&lt;/td&gt;
+    &lt;td style=&#34;text-align: center;&#34;&gt;&lt;img style=&#34;width: 243px; height: 320px;&#34; alt=&#34;&#34; title=&#34;Weather Forecast&#34; src=&#34;https://danward79.co.uk/static/ppcweatherforecast.jpg&#34;&gt;&lt;br&gt;Forecast&lt;/td&gt;
+    &lt;td style=&#34;text-align: center;&#34;&gt;&lt;img style=&#34;width: 243px; height: 321px;&#34; alt=&#34;&#34; title=&#34;Offshore Sea Conditions and Local Tides&#34; src=&#34;https://danward79.co.uk/static/ppctidalseaconditions.jpg&#34;&gt;&lt;br&gt;Tidal and Sea Conditions&lt;/td&gt;
+    &lt;td style=&#34;text-align: center;&#34;&gt;&lt;img style=&#34;width: 242px; height: 321px;&#34; alt=&#34;&#34; title=&#34;DVD Juke Box - Covers Page&#34; src=&#34;https://danward79.co.uk/static/ppcldjcovers.jpg&#34;&gt;&lt;br&gt;DVD Jukebox - Covers View&lt;/td&gt;
     &lt;/tr&gt;&lt;tr&gt;
-    &lt;td style=&#34;text-align: center;&#34;&gt;&lt;img style=&#34;width: 242px; height: 322px;&#34; alt=&#34;&#34; title=&#34;DVD JukeBox - Titles Page&#34; src=&#34;https://danward79.github.io/static/ppcljdtitles.jpg&#34;&gt;&lt;br&gt;DVD Jukebox - Titles View&lt;/td&gt;
-    &lt;td style=&#34;text-align: center;&#34;&gt;&lt;img style=&#34;width: 243px; height: 321px;&#34; alt=&#34;&#34; title=&#34;Dvd JukeBox - Large Cover View&#34; src=&#34;https://danward79.github.io/static/ppcldjlargecover.jpg&#34;&gt;&lt;br&gt;DVD Jukebox - Large Cover View&lt;/td&gt;
-    &lt;td style=&#34;text-align: center;&#34;&gt;&lt;img style=&#34;width: 243px; height: 321px;&#34; alt=&#34;&#34; title=&#34;DVD Info&#34; src=&#34;https://danward79.github.io/static/ppcldjinfo.jpg&#34;&gt;&lt;br&gt;DVD Jukebox - DVD Info&lt;/td&gt;
+    &lt;td style=&#34;text-align: center;&#34;&gt;&lt;img style=&#34;width: 242px; height: 322px;&#34; alt=&#34;&#34; title=&#34;DVD JukeBox - Titles Page&#34; src=&#34;https://danward79.co.uk/static/ppcljdtitles.jpg&#34;&gt;&lt;br&gt;DVD Jukebox - Titles View&lt;/td&gt;
+    &lt;td style=&#34;text-align: center;&#34;&gt;&lt;img style=&#34;width: 243px; height: 321px;&#34; alt=&#34;&#34; title=&#34;Dvd JukeBox - Large Cover View&#34; src=&#34;https://danward79.co.uk/static/ppcldjlargecover.jpg&#34;&gt;&lt;br&gt;DVD Jukebox - Large Cover View&lt;/td&gt;
+    &lt;td style=&#34;text-align: center;&#34;&gt;&lt;img style=&#34;width: 243px; height: 321px;&#34; alt=&#34;&#34; title=&#34;DVD Info&#34; src=&#34;https://danward79.co.uk/static/ppcldjinfo.jpg&#34;&gt;&lt;br&gt;DVD Jukebox - DVD Info&lt;/td&gt;
     &lt;/tr&gt;&lt;tr&gt;
-    &lt;td style=&#34;text-align: center;&#34;&gt;&lt;img style=&#34;width: 243px; height: 321px;&#34; alt=&#34;&#34; title=&#34;DVD Control&#34; src=&#34;https://danward79.github.io/static/ppcljddvdcontrol.jpg&#34;&gt;&lt;br&gt;DVD Control&lt;/td&gt;
+    &lt;td style=&#34;text-align: center;&#34;&gt;&lt;img style=&#34;width: 243px; height: 321px;&#34; alt=&#34;&#34; title=&#34;DVD Control&#34; src=&#34;https://danward79.co.uk/static/ppcljddvdcontrol.jpg&#34;&gt;&lt;br&gt;DVD Control&lt;/td&gt;
     &lt;td style=&#34;text-align: center;&#34;&gt;&lt;/td&gt;
     &lt;td&gt;&lt;/td&gt;
     &lt;/tr&gt;
@@ -223,10 +223,10 @@ hugo server -t casper -D
     
     <item>
       <title>Github &amp; Hugo workflow</title>
-      <link>https://danward79.github.io/post/hugoworkflow/</link>
+      <link>https://danward79.co.uk/post/hugoworkflow/</link>
       <pubDate>Tue, 14 Jul 2015 19:36:59 +1000</pubDate>
       
-      <guid>https://danward79.github.io/post/hugoworkflow/</guid>
+      <guid>https://danward79.co.uk/post/hugoworkflow/</guid>
       <description>
 
 &lt;p&gt;There are &lt;em&gt;lots&lt;/em&gt; of articles about using Hugo with Github. They are all fairly complex. I spent sometime experimenting with them. In the end I decided, I wanted to simplify.&lt;/p&gt;
@@ -315,10 +315,10 @@ cd $srcPath
     
     <item>
       <title>Watchdog on the PI</title>
-      <link>https://danward79.github.io/post/pi_watchdog/</link>
+      <link>https://danward79.co.uk/post/pi_watchdog/</link>
       <pubDate>Mon, 13 Jul 2015 20:36:59 +1000</pubDate>
       
-      <guid>https://danward79.github.io/post/pi_watchdog/</guid>
+      <guid>https://danward79.co.uk/post/pi_watchdog/</guid>
       <description>
 
 &lt;p&gt;Sometimes, it&amp;rsquo;s handy to have someone on standby to reset a computer, when it freezes in explicably. There is a tool for this purpose. It&amp;rsquo;s called a &lt;a href=&#34;https://en.wikipedia.org/wiki/Watchdog_timer&#34;&gt;watchdog&lt;/a&gt;. On most of the PI&amp;rsquo;s I have had running I have setup a watchdog for this purpose.&lt;/p&gt;
@@ -403,10 +403,10 @@ sudo /etc/init.d/watchdog start
     
     <item>
       <title>Mosquitto on the PI</title>
-      <link>https://danward79.github.io/post/mosquitto/</link>
+      <link>https://danward79.co.uk/post/mosquitto/</link>
       <pubDate>Sun, 12 Jul 2015 20:36:59 +1000</pubDate>
       
-      <guid>https://danward79.github.io/post/mosquitto/</guid>
+      <guid>https://danward79.co.uk/post/mosquitto/</guid>
       <description>
 
 &lt;p&gt;MQTT is a publish/subscribe messaging system, &lt;a href=&#34;http://mosquitto.org/&#34;&gt;Mosquitto&lt;/a&gt; is on open source broker.&lt;/p&gt;
@@ -443,10 +443,10 @@ sudo /etc/init.d/watchdog start
     
     <item>
       <title>About</title>
-      <link>https://danward79.github.io/about/</link>
+      <link>https://danward79.co.uk/about/</link>
       <pubDate>Sun, 12 Jul 2015 19:42:33 +1000</pubDate>
       
-      <guid>https://danward79.github.io/about/</guid>
+      <guid>https://danward79.co.uk/about/</guid>
       <description>
 
 &lt;p&gt;&lt;em&gt;If you have landed here, I wonder how you found your way..&lt;/em&gt;&lt;/p&gt;
